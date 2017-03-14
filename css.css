@@ -1,0 +1,48 @@
+@charset "utf-8";
+@font-face{
+	font-family:'FontAwesome';
+	src:url('https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/fonts/fontawesome-webfont.eot?v=4.5.0');
+	src:url('https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/fonts/fontawesome-webfont.eot?#iefix&v=4.5.0') format('embedded-opentype'),url('https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/fonts/fontawesome-webfont.woff2?v=4.5.0') format('woff2'),url('https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/fonts/fontawesome-webfont.woff?v=4.5.0') format('woff'),url('https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/fonts/fontawesome-webfont.ttf?v=4.5.0') format('truetype'),url('https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/fonts/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular') format('svg');
+}
+.icone{
+	font-family: FontAwesome;
+}
+body{
+	margin:0;
+	padding:0;
+	border:0;
+	font:normal 20px Kanit, sans-serif;
+	color: #222;
+	background-color: #eee;
+	text-align: center;
+}
+h1{
+	font:normal 2em Kanit, sans-serif;
+}
+img{
+	border:0;
+	max-width: 100%;
+}
+a{
+	text-decoration: none;
+	color: #222;
+}
+section, header{
+	padding: 2em;
+	box-shadow: 0 10px 10px -10px;
+}
+.flex{
+	display: flex;
+}
+.flex > *{
+	display: inline-block;
+	flex: 1;
+}
+#minha_foto{
+	width: 200px;
+	height: 200px;
+	margin: auto 2em;
+	flex: 0;
+	box-shadow: 0px 0px 0px 3px white, -1px 3px 7px 0px;
+	transform: rotate(-6deg);
+}
