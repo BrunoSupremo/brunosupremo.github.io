@@ -1,28 +1,56 @@
 <html>
 <head>
-	<title>Bruno Mussoi Mendonça</title>
+	<title>Bruno Mussoi</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="/css.css" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Kanit:200" rel="stylesheet">
 </head>
 <body>
-	<header>
-		<h1>Bruno Mussoi</h1>
-		<nav class="flex">
-			<a href="/">Trabalhos</a>
-			<a href="/sobre/">Sobre</a>
-			<a href="/metodo/">Método</a>
-			<a href="/contato/">Contato</a>
-		</nav>
-	</header>
+	<h1>Bruno Mussoi</h1>
+	<section id="sobre">
+		<img src="bruno.jpg" id="minha_foto" alt="Foto do Bruno">
+		<h2>Olá,</h2>
+		<p>Sou programador e designer de sites. Formado em Ciências da Computação, em Técnico em Informática e atualmente cursando Engenharia da Computação.</p>
+	</section>
+	<h1>Trabalhos</h1>
 	<section class="galeria flex">
 		<a href=""><img src="https://s-media-cache-ak0.pinimg.com/originals/ee/3a/95/ee3a955a8b3bfcc38cedf3136b4ab05f.jpg"></a>
 		<a href=""><img src="http://webneel.com/sites/default/files/images/manual/web25/vilkyskiu_lt.jpg.jpg"></a>
 		<a href=""><img src="http://inventikasolutions.com/wp-content/uploads/2012/07/3-browsers-12.png"></a>
 		<a href=""><img src="http://webneel.com/sites/default/files/images/manual/web25/svyturiosalis_lt.jpg.jpg"></a>
 		<a href=""><img src="http://0.s3.envato.com/files/108190/Screenshots/bvd_00.__large_preview.jpg"></a>
-		<a href="/contato/">Seu site aqui?</a>
+		<a href="#contato">Seu site aqui?</a>
+	</section>
+	<h1 id="contato">Contatos</h1>
+	<section class="contato flex">
+		<div>
+			<h2>Direto:</h2>
+			<p class="icone email">bruno_mussoi@hotmail.com</p>
+			<p class="icone skype">bruno_mussoi@hotmail.com</p>
+		</div>
+		<div>
+			<h2>Redes:</h2>
+			<p class="icone github"><a href="https://github.com/BrunoSupremo">github.com/BrunoSupremo</a></p>
+			<p class="icone linkedin"><a href="https://www.linkedin.com/in/bruno-mussoi-mendonça/">linkedin.com/in/bruno-mussoi-mendonça/</a></p>
+			<p class="icone facebook"><a href="https://www.facebook.com/brunomussoi">facebook.com/brunomussoi</a></p>
+		</div>
+		<form action="https://formspree.io/bruno_mussoi@hotmail.com" method="POST">
+			<h2>Ou formulário:</h2>
+			<label>
+				Nome:
+				<input type="text" name="name" placeholder="Seu nome">
+			</label>
+			<label>
+				E-mail:
+				<input type="email" name="_replyto" placeholder="seu_email@exemplo.com">
+			</label>
+			<label>
+				Mensagem:
+				<textarea name="mensagem" required placeholder="Sua mensagem aqui! :)"></textarea>
+			</label>
+			<input type="submit" value="Enviar">
+		</form>
 	</section>
 </body>
 </html>

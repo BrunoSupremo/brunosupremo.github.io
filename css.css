@@ -6,15 +6,17 @@
 }
 .icone::before{
 	font-family: FontAwesome;
-    margin-right: 0.5em;
-    width: 20px;
-    display: inline-block;
+	margin-right: 0.5em;
+	width: 1em;
+	display: inline-block;
+	text-align: center;
 }
 .email::before{content: "\f0e0";}
 .skype::before{content: "\f17e";}
 .github::before{content: "\f09b";}
 .linkedin::before{content: "\f08c";}
 .facebook::before{content: "\f230";}
+html{scroll-behavior: smooth;}
 body{
 	margin:0;
 	padding:0;
@@ -24,10 +26,17 @@ body{
 	background-color: #eee;
 	text-align: center;
 }
-h1{font-size: 2.5em;}
+h1{
+	box-shadow: 0 10px 10px -10px;
+	font-size: 2.5em;
+	display: inline-block;
+	padding: 0 1em;
+}
 h1, h2{
 	font-weight:normal;
 	margin: 1em auto 0;
+	grid-area: titulo;
+	align-self: bottom;
 }
 img{
 	border:0;
@@ -37,31 +46,20 @@ a{
 	text-decoration: none;
 	color: #222;
 }
-header{box-shadow: 0 10px 10px -10px;}
-header a{
-	padding: 0.75em 1.5em;
-	transition: 0.2s;
-	border-radius: 5px 5px 0 0;
-}
-header a:hover{
-	background: #666;
-	color: white;
-	box-shadow: 0 10px 10px 0px white;
-}
 section{padding: 1em;}
 .flex{
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
 }
-#minha_foto{
-	width: 150px;
-	height: 150px;
-	margin: auto 2em;
-	flex: 0;
-	box-shadow: 0px 0px 0px 3px white, -1px 3px 7px 0px;
-	transform: rotate(-6deg);
+
+#sobre{
+	display: grid;
+	grid-template-areas: 
+	"imagem titulo"
+	"imagem paragrafo";
 }
+
 .galeria{
 	width: 1050px;
 	max-width: 100%;
@@ -97,6 +95,19 @@ section{padding: 1em;}
 	font-size: 0;
 }
 .galeria a:last-child:hover::before{font-size: 30px;}
+
+#minha_foto{
+	width: 150px;
+	height: 200px;
+	margin: 2em;
+	box-shadow: 0px 0px 0px 3px white, -1px 3px 7px 0px;
+	transform: rotate(-6deg);
+	grid-area: imagem;
+	justify-self: right;
+}
+#minha_foto + p{
+	grid-area: paragrafo;
+}
 
 .contato{justify-content: space-around;}
 .contato > *{padding: 1em;}
