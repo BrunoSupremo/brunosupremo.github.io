@@ -4,53 +4,69 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css.css" type="text/css">
-	<link href="https://fonts.googleapis.com/css?family=Kanit:200" rel="stylesheet">
 </head>
 <body>
-	<h1>Bruno Mussoi</h1>
 	<section id="sobre">
 		<img src="bruno.jpg" id="minha_foto" alt="Foto do Bruno">
 		<h2>Olá,</h2>
-		<p>Sou programador e designer de sites. Formado em Ciências da Computação, em Técnico em Informática e atualmente cursando Engenharia da Computação.</p>
+		<p>Eu sou Bruno, programador e designer. Nesse site pode ver alguns dos meus projetos e experiências.</p>
 	</section>
-	<h1>Trabalhos</h1>
-	<section class="galeria flex">
-		<a href=""><img src="https://s-media-cache-ak0.pinimg.com/originals/ee/3a/95/ee3a955a8b3bfcc38cedf3136b4ab05f.jpg"></a>
-		<a href=""><img src="http://webneel.com/sites/default/files/images/manual/web25/vilkyskiu_lt.jpg.jpg"></a>
-		<a href=""><img src="http://inventikasolutions.com/wp-content/uploads/2012/07/3-browsers-12.png"></a>
-		<a href=""><img src="http://webneel.com/sites/default/files/images/manual/web25/svyturiosalis_lt.jpg.jpg"></a>
-		<a href=""><img src="http://0.s3.envato.com/files/108190/Screenshots/bvd_00.__large_preview.jpg"></a>
-		<a href="#contato">Seu site aqui?</a>
-	</section>
-	<h1 id="contato">Contatos</h1>
-	<section class="contato flex">
+	<section id="sites" class="link_list">
+		<h1>Sites</h1>
 		<div>
-			<h2>Direto:</h2>
-			<p class="icone email">bruno_mussoi@hotmail.com</p>
-			<p class="icone skype">bruno_mussoi@hotmail.com</p>
+			<img src="quiosque_ventania.png">
+			<h2>Quiosque Ventania</h2>
+			<p>Quiosque da Praia do Centro em Itanhaém</p>
+			<a href="https://brunosupremo.github.io/Quiosque-Ventania/">Visitar site</a>
 		</div>
 		<div>
+			<img src="nn_bartender.png">
+			<h2>NN Bartenders</h2>
+			<p>Serviços de bar para eventos</p>
+			<a href="https://brunosupremo.github.io/nnBartender/">Visitar site</a>
+		</div>
+		<div>
+			<img src="youtuber.png">
+			<h2>Youtuber</h2>
+			<p>Site para Youtuber/Gamer</p>
+			<a href="https://brunosupremo.github.io/BrunoSupremo-youtube-channel-site/">Visitar site</a>
+		</div>
+		<div>
+			<img src="stonehearth_builds.png">
+			<h2>StoneHearth Builds</h2>
+			<p>Rede de compartilhamento de construções virtuais</p>
+			<a href="https://github.com/BrunoSupremo/StoneHearth-Builds">Visitar site</a>
+		</div>
+		<a href="#contato">Quer seu site aqui?</a>
+	</section>
+	<section id="contato">
+		<h1>Contatos</h1>
+		<h2>Direto:</h2>
+		<p id="email">bruno_mussoi@hotmail.com</p>
+		<div class="link_list">
 			<h2>Redes:</h2>
-			<p class="icone github"><a href="https://github.com/BrunoSupremo">github.com/BrunoSupremo</a></p>
-			<p class="icone linkedin"><a href="https://www.linkedin.com/in/bruno-mussoi-mendonça/">linkedin.com/in/bruno-mussoi-mendonça/</a></p>
-			<p class="icone facebook"><a href="https://www.facebook.com/brunomussoi">facebook.com/brunomussoi</a></p>
+			<a href="https://github.com/BrunoSupremo">github.com/BrunoSupremo</a>
+			<a href="https://www.linkedin.com/in/bruno-mussoi-mendonça/">linkedin.com/in/bruno-mussoi-mendonça/</a>
+			<a href="https://www.instagram.com/bruno_mussoi/">instagram.com/bruno_mussoi/</a>
+			<a href="https://www.facebook.com/brunomussoi">facebook.com/brunomussoi</a>
 		</div>
 		<form action="https://formspree.io/bruno_mussoi@hotmail.com" method="POST">
 			<h2>Ou formulário:</h2>
 			<label>
 				Nome:
-				<input type="text" name="name" placeholder="Seu nome">
 			</label>
+			<input type="text" name="name" placeholder="Seu nome">
 			<label>
 				E-mail:
-				<input type="email" name="_replyto" placeholder="seu_email@exemplo.com">
 			</label>
+			<input type="email" name="_replyto" placeholder="seu_email@exemplo.com">
 			<label>
 				Mensagem:
-				<textarea name="mensagem" required placeholder="Sua mensagem aqui! :)"></textarea>
 			</label>
-			<input type="submit" value="Enviar">
+			<textarea name="mensagem" required placeholder="Sua mensagem aqui! :)"></textarea>
+			<button>Enviar</button>
 		</form>
 	</section>
+	<script src="js.js"></script>
 </body>
 </html>
