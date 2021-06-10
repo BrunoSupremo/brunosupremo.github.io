@@ -1,0 +1,132 @@
+@charset "utf-8";
+@keyframes bounce_vertical{
+	0%,100%{
+		transform: translateY(0);
+	}
+	50%{
+		transform: translateY(1em);
+	}
+}
+@keyframes bounce_horizontal{
+	0%,100%{
+		transform: translateX(0);
+	}
+	50%{
+		transform: translateX(1em);
+	}
+}
+.cyber *{
+	font-family: "Courier New", monospace;
+	text-transform: uppercase;
+	text-shadow: 0 0 1em;
+}
+html.cyber{
+    color-scheme: dark;
+	--main_hue: 200;
+	--main_color: hsl(var(--main_hue) 100% 50%);
+	--secondary_hue: 40;
+	--secondary_color: hsl(var(--secondary_hue) 100% 50%);
+	--transparent_main_color: hsl(var(--main_hue) 100% 50% / 10%);
+	--transparent_secondary_color: hsl(var(--secondary_hue) 100% 50% / 10%);
+	--background_color: hsl(var(--main_hue) 100% 2%);
+	--main_border: 2px solid;
+	--main_box_shadow: inset 0 0 1px 1px var(--background_color), 0 0 1px 1px var(--background_color), 0 0 10px, inset 0 0 10px;
+}
+.cyber body{
+	background: black;
+}
+.cyber ::first-letter{
+	color: var(--secondary_color);
+}
+.cyber img{
+	background: var(--background_color);
+	padding: 5px;
+	border-style: solid solid solid double;
+	border-width: 1px 1px 1px 5px;
+	box-shadow: var(--main_box_shadow);
+}
+.cyber .link_list a{
+	list-style-type: "▫ ";
+}
+.cyber .link_list :is(a:hover,a:focus){
+	list-style-type: "▪ ";
+}
+
+.cyber .glitch{
+	text-transform: lowercase;
+}
+
+.cyber #options .current{
+	border-width: 2px 5px;
+}
+
+@keyframes screen_lines{
+	0%{
+		background-position:0 0;
+	}
+	100%{
+		background-position:0 50px;
+	}
+}
+.cyber section{
+	border: var(--main_border);
+	box-shadow: var(--main_box_shadow);
+	background: var(--transparent_main_color);
+	background-image: 
+	linear-gradient(0deg, transparent 24%, var(--transparent_main_color) 25%, transparent 26%, transparent 74%, var(--transparent_main_color) 75%, transparent 76%);
+	background-size: 50px 50px;
+	animation: screen_lines 10s linear infinite;
+}
+.cyber section::before, .cyber section::after{
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 50%;
+	left: -1em;
+	bottom: 1em;
+	border: 1px solid;
+	color: var(--secondary_color);
+	box-shadow: var(--main_box_shadow);
+	animation: bounce_vertical 10s infinite;
+}
+.cyber section::after{
+	width: 50%;
+	height: 0;
+	left: unset;
+	right: 1em;
+	bottom: -1em;
+	animation-name: bounce_horizontal;
+}
+.cyber section h1{
+	position: absolute;
+	padding: 0 1em;
+	top: -1em;
+	border: var(--main_border);
+	box-shadow: var(--main_box_shadow);
+	background: var(--background_color);
+	background-image: 
+	linear-gradient(0deg, transparent 24%, var(--transparent_main_color) 25%, transparent 26%, transparent 74%, var(--transparent_main_color) 75%, transparent 76%);
+	background-size: 50px 50px;
+	animation: screen_lines 10s linear infinite;
+}
+.cyber form label + *{
+	background: var(--background_color);
+	border-bottom: var(--main_border);
+	color: currentcolor;
+}
+.cyber form label + *:focus{
+	color: var(--secondary_color);
+}
+.cyber button{
+	all: unset;
+	display: block;
+	margin: 1em auto;
+	border: var(--main_border);
+	padding: .5em 1em;
+	box-shadow: var(--main_box_shadow);
+	color: var(--secondary_color);
+}
+.cyber button:hover{
+	border-left: 5px double;
+	border-right: 5px double;
+}

@@ -1,13 +1,19 @@
-<html>
+<html lang="pt-BR">
 <head>
 	<title>Bruno Mussoi</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css.css" type="text/css">
+	<link rel="stylesheet" href="cyber.css" type="text/css">
+	<link rel="stylesheet" href="slime.css" type="text/css">
+	<link rel="stylesheet" href="construction.css" type="text/css">
+	<script type="text/javascript">
+		document.documentElement.className = localStorage.getItem("theme") || "cyber";
+	</script>
 </head>
 <body>
 	<section id="sobre">
-		<img src="bruno.jpg" id="minha_foto" alt="Foto do Bruno">
+		<img src="bruno.jpg" alt="Foto do Bruno">
 		<h2>Olá,</h2>
 		<p>Eu sou Bruno, programador e designer. Nesse site pode ver alguns dos meus projetos e experiências.</p>
 	</section>
@@ -38,6 +44,18 @@
 			<a href="https://github.com/BrunoSupremo/StoneHearth-Builds">Visitar site</a>
 		</div>
 		<a href="#contato">Quer seu site aqui?</a>
+	</section>
+	<section>
+		<h1>Temas</h1>
+		<div id="options">
+			<button lang="en" class="current" onclick="change_theme(this, 'cyber')">Cyber</button>
+			<button lang="en" onclick="change_theme(this, 'slime')">Slime</button>
+			<button onclick="change_theme(this, 'construction')">Em Construção</button>
+			<!-- <button onclick="change_theme(this, 'mars')">Marte</button> -->
+			<!-- love, eco, school paper-->
+			<button onclick="change_theme(this, 'notheme')">Sem tema</button>
+		</div>
+		<p>O visual de um site deve conectar o visitante, até mesmo emocionalmente. <span class="color_changer">Escolha um tema acima</span> e veja como esse próprio site se transformará.</p>
 	</section>
 	<section id="contato">
 		<h1>Contatos</h1>

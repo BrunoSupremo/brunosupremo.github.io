@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+.construction *{
+	font-family: "Impact", fantasy, monospace;
+}
+html.construction{
+	--secondary_color: yellow;
+}
+.construction img{
+	padding: 5px;
+	border: .1em dashed black;
+}
+.construction a{
+	text-decoration-style: dashed;
+	text-decoration-thickness: .1em;
+}
+.construction :is(a:hover, a:focus){
+	text-decoration-style: solid;
+}
+
+.construction .link_list a{
+	list-style-type: "||| ";
+}
+
+.construction #options .current{
+	border-width: 2px 5px;
+}
+
+.construction section{
+	border: .2em dashed black;
+	background-color: #666;
+	color: white;
+}
+.construction section h1{
+	padding: 0 1em;
+	border: .1em dashed;
+	background-image: repeating-linear-gradient(45deg, black, black 1em, yellow 1em, yellow 2em);
+	color: black;
+	text-shadow:
+	-.1em -.1em yellow,
+	-.1em 0 yellow,
+	-.1em .1em yellow,
+	0 -.1em yellow,
+	0 .1em yellow,
+	.1em -.1em yellow,
+	.1em 0 yellow,
+	.1em .1em yellow;
+}
+.construction form label + *{
+	border-bottom: .1em dashed;
+}
+.construction button{
+	all: unset;
+	display: block;
+	margin: 1em auto;
+	border: .1em dashed;
+	padding: .5em 1em;
+	color: var(--secondary_color);
+}
+.construction button:hover{
+	border-bottom-style: solid;
+	border-top-style: solid;
+}
