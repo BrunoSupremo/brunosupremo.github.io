@@ -27,6 +27,7 @@ html.construction{
 }
 
 .construction section{
+	text-align: justify;
 	border: .2em dashed black;
 	background-color: #666;
 	color: white;

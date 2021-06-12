@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+.mars *{
+	font-family: "Verdana", sans-serif;
+}
+html.mars{
+	--main_color: hsl(0deg 100% 70%);
+	--secondary_color: hsl(20deg 75% 50%);
+	--background_color: white;
+}
+.mars body{
+	background-image: linear-gradient(var(--main_color), var(--secondary_color));
+	background-attachment: fixed;
+	color: brown;
+}
+.mars img{
+	border-radius: 10px;
+	border: 1px solid;
+	border-width: 0 2px 5px;
+	color: brown;
+}
+.mars .link_list a{
+	list-style-type: "⊙ ";
+}
+
+.mars #options .current{
+	box-shadow: 0 0 1.5em white inset, 0 0.2em 0 white inset, 0 -0.5em 1em white,0 0 1px black;
+}
+
+.mars section{
+	background-image: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.7));
+	border-radius: 10px;
+	border: 1px solid white;
+	border-width: 0 2px 5px;
+	box-shadow: 0 0.5em 1em pink;
+	text-shadow: 0 0 1em white;
+}
+.mars form label + *{
+	background: transparent;
+	box-shadow:
+	1em 0em 0.5em -1em var(--secondary_color) inset,
+	-1em -1em 0.5em -1em var(--secondary_color) inset,
+	0em 1em 0.5em -1em var(--main_color) inset;
+	border: solid brown;
+	border-width: 0 .2em;
+	color: var(--secondary_color);
+}
+.mars form label + *::placeholder{
+	color: var(--main_color);
+}
+.mars form label + *:focus{
+	outline-color: var(--main_color);
+}
+.mars button{
+	color: var(--main_color);
+	border-radius: 10px;
+	border: solid brown;
+	border-width: 0 5px;
+	background: transparent;
+	box-shadow: 0 0 0.5em black inset, 0 3em 0 white inset;
+	transition: .3s;
+}
+.mars button:hover{
+	box-shadow: 0 0 0.5em black inset, 0 0.2em 0 white inset, 0 -0.5em 1em white;
+	color: var(--secondary_color);
+	text-shadow: 0 0 1em white;
+}
