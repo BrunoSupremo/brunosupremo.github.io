@@ -51,11 +51,8 @@ html.construction{
 	border-bottom: .1em dashed;
 }
 .construction button{
-	all: unset;
-	display: block;
-	margin: 1em auto;
+	background: transparent;
 	border: .1em dashed;
-	padding: .5em 1em;
 	color: var(--secondary_color);
 }
 .construction button:hover{

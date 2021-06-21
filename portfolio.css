@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+.portfolio *{
+	font-family: "Verdana", sans-serif;
+}
+html.portfolio{
+	--main_color: hsl(200deg 100% 20%);
+	--secondary_color: hsl(120deg 70% 60%);
+	--background_color: white;
+}
+.portfolio body{
+	color: var(--background_color);
+	box-shadow: 0 0 0 0.5em var(--background_color) inset, 0 0 0 0.6em var(--main_color) inset;
+	border-radius: 1em;
+}
+.portfolio img{
+	border-radius: .5em;
+	border: .1em solid;
+}
+.portfolio .link_list a{
+	list-style-type: "// ";
+}
+
+.portfolio #options .current{
+	box-shadow: 0 0 0 3em var(--secondary_color) inset;
+	color: var(--background_color);
+}
+
+.portfolio section{
+	background-image: linear-gradient(135deg,
+		var(--main_color) 1em,
+		var(--background_color) 1em,
+		var(--background_color) 2em,
+		var(--main_color) 2em,
+		var(--main_color) calc(100% - 2em),
+		var(--background_color) calc(100% - 2em),
+		var(--background_color) calc(100% - 1em),
+		var(--main_color) calc(100% - 1em)
+		);
+	border-radius: .5em;
+	border: .1em solid var(--background_color);
+	box-shadow: 0 .5em 1em -.5em var(--main_color);
+}
+.portfolio form label + *{
+	background: var(--background_color);
+	border: solid;
+	border-width: 0 .2em;
+	color: var(--main_color);
+}
+.portfolio form label + *:focus{
+	outline-color: var(--secondary_color);
+}
+.portfolio button{
+	color: var(--secondary_color);
+	border: .1em solid;
+	border-radius: .5em;
+	background: transparent;
+	transition: .3s;
+	box-shadow: 0 0 var(--background_color) inset;
+}
+.portfolio button:hover{
+	box-shadow: 10em 0 var(--background_color) inset;
+	color: var(--main_color);
+}

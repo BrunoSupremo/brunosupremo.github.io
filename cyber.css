@@ -118,11 +118,8 @@ html.cyber{
 	color: var(--secondary_color);
 }
 .cyber button{
-	all: unset;
-	display: block;
-	margin: 1em auto;
+	background: transparent;
 	border: var(--main_border);
-	padding: .5em 1em;
 	box-shadow: var(--main_box_shadow);
 	color: var(--secondary_color);
 }

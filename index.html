@@ -4,12 +4,13 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css.css" type="text/css">
+	<link rel="stylesheet" href="portfolio.css" type="text/css">
 	<link rel="stylesheet" href="cyber.css" type="text/css">
 	<link rel="stylesheet" href="slime.css" type="text/css">
 	<link rel="stylesheet" href="construction.css" type="text/css">
 	<link rel="stylesheet" href="mars.css" type="text/css">
 	<script type="text/javascript">
-		document.documentElement.className = localStorage.getItem("theme") || "cyber";
+		document.documentElement.className = localStorage.getItem("theme") || "portfolio";
 	</script>
 </head>
 <body>
@@ -46,14 +47,15 @@
 		</div>
 		<a href="#contato">Quer seu site aqui?</a>
 	</section>
-	<section>
+	<section id="temas">
 		<h1>Temas</h1>
 		<div id="options">
-			<button lang="en" class="current" onclick="change_theme(this, 'cyber')">Cyber</button>
+			<button class="current" onclick="change_theme(this, 'portfolio')">Portfolio</button>
+			<button lang="en" onclick="change_theme(this, 'cyber')">Cyber</button>
 			<button lang="en" onclick="change_theme(this, 'slime')">Slime</button>
-			<button onclick="change_theme(this, 'construction')">Em Construção</button>
+			<button onclick="change_theme(this, 'construction')">Construção</button>
 			<button onclick="change_theme(this, 'mars')">Marte</button>
-			<!-- love, eco, school paper-->
+			<!-- outros temas: love, eco, school paper-->
 			<button onclick="change_theme(this, 'notheme')">Sem tema</button>
 		</div>
 		<p>O visual de um site deve conectar o visitante, até mesmo emocionalmente. <span class="color_changer">Escolha um tema acima</span> e veja como esse próprio site se transformará.</p>

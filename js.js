@@ -6,7 +6,7 @@ function change_theme(button, theme) {
 	document.documentElement.classList.add(theme, "transitioning");
 	setTimeout(function (){
 		document.documentElement.classList.remove("transitioning")
-	}, 3000);
+	}, 2000);
 
 	localStorage.setItem("theme", theme);
 }

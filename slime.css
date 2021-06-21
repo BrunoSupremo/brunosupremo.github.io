@@ -169,34 +169,29 @@ html.slime{
 .slime button{
 	border: none;
 	color: var(--main_color_dark);
-	text-shadow:
-	-.1em -.1em 0em var(--main_color_light),
-	0em -.1em 0em var(--main_color_light),
-	.1em -.1em 0em var(--main_color_light),
-	-.1em 0em 0em var(--main_color_light),
-	.1em 0em 0em var(--main_color_light),
-	-.1em .1em 0em var(--main_color_light),
-	0em .1em 0em var(--main_color_light),
-	.1em .1em 0em var(--main_color_light);
+	text-shadow: none;
+	transition: all 1s linear, padding .3s, margin .3s;
 }
 .slime button:hover{
-	text-shadow:
-	0 0 2em var(--main_color),
-	0 0 2em var(--main_color),
-	0 0 2em var(--main_color),
-	0 0 2em var(--main_color),
-	0 0 2em var(--main_color),
-	0 0 2em var(--main_color),
-	0 0 2em var(--main_color),
-	0 0 2em var(--main_color);
+	padding: 1em .5em;
+	margin: .5em 1.5em;
+}
+
+.slime #contato button:hover{
+	padding: 1em .5em;
+	margin: .5em auto;
 }
 .slime :is(img, button){
 	background-color: white;
 	box-shadow:
-	.5em .5em 1em 0em var(--main_color_light),
-	-.5em -1em 1em -.5em var(--main_color_dark);
+	0 -.5em 1em var(--main_color_light),
+	0 .5em 1em var(--main_color_dark);
 }
 
 .slime :is(a, .color_changer){
 	--secondary_color: hsl(var(--main_hue) 100% 20%);
+}
+
+.slime form label + *{
+	border: 3px solid var(--main_color_light);
 }
