@@ -59,3 +59,12 @@ html.construction{
 	border-bottom-style: solid;
 	border-top-style: solid;
 }
+
+@media only screen and (max-width: 600px) {
+	.construction section{
+		margin: 1em 0;
+	}
+	.construction section:nth-child(even){
+		text-align: left;
+	}
+}

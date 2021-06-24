@@ -20,7 +20,7 @@ html.mars{
 	height: 50vw;
 	max-width: 50ch;
 	max-height: 50ch;
-	margin: 3em auto -3em;
+	margin: 3em 3em 0;
 	content: "";
 	border-radius: 50%;
 	box-sizing: border-box;
@@ -85,4 +85,10 @@ html.mars{
 }
 .mars #contato{
 	order: 3;
+}
+
+@media only screen and (max-width: 600px) {
+	.mars section{
+		margin: 1em 0;
+	}
 }

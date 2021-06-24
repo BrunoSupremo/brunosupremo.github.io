@@ -127,6 +127,16 @@ html.slime{
 		background-position:100px 100px;
 	}
 }
+@keyframes slime_size{
+	0%{
+		margin: 2.5em 3em;
+		padding: 2.5em 2em;
+	}
+	100%{
+		margin: 3em 2.5em;
+		padding: 2em 2.5em;
+	}
+}
 
 .slime section{
 	color: var(--background_color);
@@ -138,8 +148,9 @@ html.slime{
 	border: 3px double;
 	background-image: repeating-linear-gradient(135deg, transparent, rgba(0,0,0,0.1), transparent, rgba(0,0,0,0.1), transparent);
 	background-size:250px 250px;
-	animation: slime_lines 10s ease-in-out infinite alternate;
+	animation: slime_lines 10s ease-in-out infinite alternate, slime_size 2s infinite alternate ease-in-out;
 	overflow: hidden;
+	padding: 2em;
 }
 .slime section:nth-child(4n+1){
 	--main_hue: 100;
@@ -194,4 +205,20 @@ html.slime{
 
 .slime form label + *{
 	border: 3px solid var(--main_color_light);
+}
+
+@media only screen and (max-width: 600px) {
+	@keyframes slime_size{
+		0%{
+			margin: 2em 0;
+			padding: 1em 0;
+		}
+		100%{
+			margin: 1.5em 0;
+			padding: 1.5em 0;
+		}
+	}
+	.slime section{
+		padding: 1em 0;
+	}
 }

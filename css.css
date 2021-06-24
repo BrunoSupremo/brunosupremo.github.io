@@ -39,6 +39,7 @@ img{
 	width: 100px;
 	height: 100px;
 	object-fit: contain;
+	margin-right: 1em;
 }
 a{
 	color: var(--secondary_color);
@@ -118,9 +119,8 @@ button{
 }
 #sites div img{
 	grid-area: img;
-	margin-right: 1em;
 }
-#sites div > *{
+#sites div > *:not(img){
 	margin: auto auto auto 0;
 }
 #sites > a:last-child{
@@ -131,6 +131,25 @@ button{
 #contato button{
 	display: block;
 	margin: 1em auto;
+}
+
+@media only screen and (max-width: 600px) {
+	section{
+		margin: 2em 0;
+		padding: 0;
+	}
+	section > p{
+		padding: 0 1em;
+	}
+	img{
+		margin-right: .5em;
+	}
+	#sites h2{
+		text-align: left;
+	}
+	#sites > a:last-child{
+		margin-bottom: 1em;
+	}
 }
 
 @media print{

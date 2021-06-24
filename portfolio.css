@@ -10,8 +10,10 @@ html.portfolio{
 }
 .portfolio body{
 	color: var(--background_color);
-	box-shadow: 0 0 0 0.5em var(--background_color) inset, 0 0 0 0.6em var(--main_color) inset;
-	border-radius: 1em;
+	background-image: linear-gradient(var(--main_color) -10%, var(--secondary_color) 200%);
+}
+.portfolio h1{
+	margin-bottom: 1em;
 }
 .portfolio img{
 	border-radius: .5em;
@@ -27,19 +29,20 @@ html.portfolio{
 }
 
 .portfolio section{
+	padding: 3em;
 	background-image: linear-gradient(135deg,
-		var(--main_color) 1em,
-		var(--background_color) 1em,
-		var(--background_color) 2em,
 		var(--main_color) 2em,
-		var(--main_color) calc(100% - 2em),
+		var(--background_color) 2em,
+		var(--background_color) 3em,
+		var(--main_color) 3em,
+		var(--main_color) calc(100% - 3em),
+		var(--background_color) calc(100% - 3em),
 		var(--background_color) calc(100% - 2em),
-		var(--background_color) calc(100% - 1em),
-		var(--main_color) calc(100% - 1em)
+		var(--main_color) calc(100% - 2em)
 		);
 	border-radius: .5em;
 	border: .1em solid var(--background_color);
-	box-shadow: 0 .5em 1em -.5em var(--main_color);
+	box-shadow: 0 1em 1em -1em black;
 }
 .portfolio form label + *{
 	background: var(--background_color);
@@ -60,5 +63,23 @@ html.portfolio{
 }
 .portfolio button:hover{
 	box-shadow: 10em 0 var(--background_color) inset;
+	border-color: var(--secondary_color);
 	color: var(--main_color);
+}
+
+.portfolio #sites > a:last-child{
+	margin-top: 3em;
+}
+.portfolio #options{
+	margin-bottom: 2em;
+}
+.portfolio #contato button{
+	margin-top: 3em;
+}
+
+@media only screen and (max-width: 600px) {
+	.portfolio section{
+		margin: 0;
+		padding: 0;
+	}
 }
