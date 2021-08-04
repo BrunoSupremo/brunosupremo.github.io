@@ -156,7 +156,8 @@ button{
 	*,
 	*::before,
 	*::after,
-	::first-letter{
+	::first-letter,
+	::placeholder{
 		color-scheme: light !important;
 		content: revert !important;
 		box-shadow: revert !important;

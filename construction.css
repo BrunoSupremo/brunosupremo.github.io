@@ -4,11 +4,13 @@
 	font-family: "Impact", fantasy, monospace;
 }
 html.construction{
-	--secondary_color: yellow;
+	--main_color: #111;
+	--secondary_color: #fd0;
+	--background_color: #cc8;
 }
 .construction img{
 	padding: 5px;
-	border: .1em dashed black;
+	border: .1em dashed var(--main_color);
 }
 .construction a{
 	text-decoration-style: dashed;
@@ -28,24 +30,24 @@ html.construction{
 
 .construction section{
 	text-align: justify;
-	border: .2em dashed black;
-	background-color: #666;
-	color: white;
+	border: .2em dashed var(--main_color);
+	background-color: #665;
+	color: #eee;
 }
 .construction section h1{
 	padding: 0 1em;
 	border: .1em dashed;
-	background-image: repeating-linear-gradient(45deg, black, black 1em, yellow 1em, yellow 2em);
-	color: black;
+	background-image: repeating-linear-gradient(45deg, currentcolor, currentcolor 1em, var(--secondary_color) 1em, var(--secondary_color) 2em);
+	color: var(--main_color);
 	text-shadow:
-	-.1em -.1em yellow,
-	-.1em 0 yellow,
-	-.1em .1em yellow,
-	0 -.1em yellow,
-	0 .1em yellow,
-	.1em -.1em yellow,
-	.1em 0 yellow,
-	.1em .1em yellow;
+	-.1em -.1em var(--secondary_color),
+	-.1em 0 var(--secondary_color),
+	-.1em .1em var(--secondary_color),
+	0 -.1em var(--secondary_color),
+	0 .1em var(--secondary_color),
+	.1em -.1em var(--secondary_color),
+	.1em 0 var(--secondary_color),
+	.1em .1em var(--secondary_color);
 }
 .construction form label + *{
 	border-bottom: .1em dashed;

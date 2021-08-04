@@ -13,7 +13,7 @@ function change_theme(button, theme) {
 
 const loop_timer = setInterval(one_second_loop, 1010);
 function one_second_loop() {
-	//conditionals just to avoid running unnecessary lag
+	//conditionals to avoid running unnecessary lag
 	if(document.documentElement.className == "cyber"){
 		glitch();
 	}
@@ -35,6 +35,7 @@ function glitch() {
 }
 
 function apply_random_border_classes() {
+	// so two neighbor elements do not have visually the same corner with same shape
 	const random_border_elements = document.querySelectorAll(":is(section, img, button, input, textarea)");
 	for (let i = 0; i < random_border_elements.length; i++) {
 		random_border_elements[i].classList.add("random_slime_"+(i%8 +1));

@@ -10,7 +10,30 @@ html.portfolio{
 }
 .portfolio body{
 	color: var(--background_color);
-	background-image: linear-gradient(var(--main_color) -10%, var(--secondary_color) 200%);
+	background-color: hsl(200deg 50% 10%);
+	background-image:
+	repeating-linear-gradient(45deg,
+		transparent 0em,
+		hsl(200deg 50% 10%) 0em,
+		hsl(200deg 50% 10%) 2em,
+		transparent 2em,
+		transparent 6em
+		),
+	repeating-linear-gradient(135deg,
+		transparent 2em,
+		var(--main_color) 2em,
+		var(--main_color) 2.1em,
+		transparent 2.1em,
+		transparent 6em,
+		var(--background_color) 6em,
+		var(--background_color) 6.1em,
+		transparent 6.1em,
+		transparent 10em,
+		var(--secondary_color) 10em,
+		var(--secondary_color) 10.1em,
+		transparent 10.1em,
+		transparent 14em
+		);
 }
 .portfolio h1{
 	margin-bottom: 1em;
@@ -42,7 +65,7 @@ html.portfolio{
 		);
 	border-radius: .5em;
 	border: .1em solid var(--background_color);
-	box-shadow: 0 1em 1em -1em black;
+	box-shadow: 0 0 1em black inset;
 }
 .portfolio form label + *{
 	background: var(--background_color);
