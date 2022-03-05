@@ -16,7 +16,7 @@
 	}
 }
 .cyber *{
-	font-family: "Courier New", monospace;
+	font-family: "Courier New", "OCR A Std", "FreeMono", monospace;
 	text-transform: uppercase;
 	text-shadow: 0 0 1em;
 }
@@ -116,6 +116,10 @@ html.cyber{
 }
 .cyber form label + *:focus{
 	color: var(--secondary_color);
+}
+.cyber form label + :is(*:-webkit-autofill, *:autofill){
+	/*hack to counter chrome stupid useragent stylesheet*/
+	box-shadow: 0 0 0 2em var(--background_color) inset;
 }
 .cyber button{
 	background: transparent;

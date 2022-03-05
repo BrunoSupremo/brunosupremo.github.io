@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 .slime *{
-	font-family: "Comic Sans", cursive;
+	font-family: "Comic Sans MS", "Comic Sans", "Bradley Hand", "Chalkboard SE", "Comic Neue", sans-serif;
 	transition: 1s linear;
 	text-shadow: 0 2px var(--main_color_dark);
 }
