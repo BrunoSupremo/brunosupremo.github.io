@@ -4,50 +4,51 @@
 	font-family: "Verdana", sans-serif;
 }
 html.mars{
-	--main_color: hsl(0deg 100% 70%);
-	--secondary_color: hsl(20deg 75% 50%);
+	--main_color: brown;
+	--secondary_color: pink;
 	--background_color: white;
 }
 .mars body{
-	background-image: linear-gradient(var(--main_color), var(--secondary_color));
-	background-attachment: fixed;
-	color: brown;
+	background:black;
+	color: white;
 }
 .mars body::before{
-	order: 1;
-	position: relative;
-	width: 50vw;
-	height: 50vw;
-	max-width: 50ch;
-	max-height: 50ch;
-	margin: 3em 3em 0;
 	content: "";
+	position: fixed;
+	width: 50vh;
+	height: 50vh;
+	right: 0;
+	bottom: 0;
 	border-radius: 50%;
-	box-sizing: border-box;
-	box-shadow: 0 -2vw 2vw -1vw pink, 0 6vw 2vw -4vw brown inset;
+	background-color: black;
+	box-shadow:
+	0 -2vh 2vh -1vh pink,
+	0 1vh 1vh -1vh pink inset,
+	0 6vh 3vh -4vh brown inset,
+	0 -50vh 50vh 10vw #00009933;
 }
 .mars img{
 	border-radius: 10px;
 	border: 1px solid;
 	border-width: 0 2px 5px;
-	color: brown;
+	color: var(--main_color);
 }
 .mars .link_list a{
 	list-style-type: "⊙ ";
 }
 
 .mars #options .current{
-	box-shadow: 0 0 1.5em white inset, 0 0 .5em white, 0 0 1px black;
+	box-shadow: 0 0 0 white;;
 	border-color: white;
+	color: white;
 }
 
 .mars section{
-	background-image: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.7));
+	background-image: linear-gradient(#fff3, #F44336);
 	border-radius: 10px;
 	border: 1px solid white;
-	border-width: 0 2px 5px;
-	box-shadow: 0 0.5em 1em pink;
-	text-shadow: 0 0 1em white;
+	border-width: 0px 2px 5px;
+	box-shadow: 0 0.2em 1em white;
 }
 .mars form label + *{
 	background: white;
@@ -55,12 +56,12 @@ html.mars{
 	1em 0em 0.5em -1em var(--secondary_color) inset,
 	-1em -1em 0.5em -1em var(--secondary_color) inset,
 	0em 1em 0.5em -1em var(--main_color) inset;
-	border: solid brown;
+	border: solid var(--main_color);
 	border-width: 0 .2em;
-	color: var(--secondary_color);
+	color: var(--main_color);
 }
 .mars form label + *::placeholder{
-	color: var(--main_color);
+	color: var(--secondary_color);
 }
 .mars form label + *:focus{
 	outline-color: var(--main_color);
@@ -68,27 +69,20 @@ html.mars{
 .mars button{
 	color: var(--main_color);
 	border-radius: 10px;
-	border: solid brown;
+	border: solid var(--main_color);
 	border-width: 0 5px;
 	background: transparent;
 	box-shadow: 0 0 0.5em black inset, 0 3em 0 white inset;
 	transition: .3s;
 }
 .mars button:hover{
-	box-shadow: 0 0 0.5em black inset, 0 0.2em 0 white inset, 0 -0.5em 1em white;
-	color: var(--secondary_color);
-	text-shadow: 0 0 1em white;
-}
-
-.mars #temas{
-	order: 2;
-}
-.mars #contato{
-	order: 3;
+	box-shadow: 0 0 0.5em black inset, 0 0.2em 0 white inset, 0 -1.5em 1em -0.5em white;
+	color: white;
 }
 
 @media only screen and (max-width: 600px) {
 	.mars section{
 		margin: 1em 0;
+		padding: .5em;
 	}
 }

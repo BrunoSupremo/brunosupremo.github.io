@@ -97,12 +97,12 @@ html.portfolio{
 	margin-bottom: 2em;
 }
 .portfolio #contato button{
-	margin-top: 3em;
+	margin-top: 2em;
 }
 
 @media only screen and (max-width: 600px) {
 	.portfolio section{
-		margin: 0;
-		padding: 0;
+		margin: 1em 0;
+		padding: 1em;
 	}
 }

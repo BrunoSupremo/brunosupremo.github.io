@@ -75,6 +75,7 @@ section h1{
 }
 form{
 	margin: 0;
+	border-top: 1px solid;
 }
 form label{
 	display: block;
@@ -86,6 +87,7 @@ form label + *{
 	width: 100%;
 }
 button{
+	cursor: pointer;
 	margin: 1em;
 	padding: .5em 1em;
 }
