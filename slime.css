@@ -2,7 +2,7 @@
 
 .slime *{
 	font-family: "Comic Sans MS", "Comic Sans", "Bradley Hand", "Chalkboard SE", "Comic Neue", sans-serif;
-	transition: 1s linear;
+	transition: 4s linear(0 0%, 0.22 2.1%, 0.86 6.5%, 1.11 8.6%, 1.3 10.7%, 1.35 11.8%, 1.37 12.9%, 1.37 13.7%, 1.36 14.5%, 1.32 16.2%, 1.03 21.8%, 0.94 24%, 0.89 25.9%, 0.88 26.85%, 0.87 27.8%, 0.87 29.25%, 0.88 30.7%, 0.91 32.4%, 0.98 36.4%, 1.01 38.3%, 1.04 40.5%, 1.05 42.7%, 1.05 44.1%, 1.04 45.7%, 1 53.3%, 0.99 55.4%, 0.98 57.5%, 0.99 60.7%, 1 68.1%, 1.01 72.2%, 1 86.7%, 1 100%);
 	text-shadow: 0 2px var(--main_color_dark);
 }
 .slime.transitioning *{
@@ -110,14 +110,14 @@ html.slime{
 	--main_color_light: hsl(var(--main_hue) 100% 75%);
 	--main_color_dark: hsl(var(--main_hue) 100% 25%);
 
-	--random_radius_1: 1em;
-	--random_radius_2: 2em;
-	--random_radius_3: 3em;
-	--random_radius_4: 1em;
-	--random_radius_5: 2em;
-	--random_radius_6: 3em;
-	--random_radius_7: 1em;
-	--random_radius_8: 2em;
+	--random_radius_1: 2em;
+	--random_radius_2: 3em;
+	--random_radius_3: 4em;
+	--random_radius_4: 5em;
+	--random_radius_5: 6em;
+	--random_radius_6: 7em;
+	--random_radius_7: 2em;
+	--random_radius_8: 3em;
 }
 .slime body{
 	background-color: #123;
@@ -126,30 +126,9 @@ html.slime{
 .slime section{
 	color: var(--background_color);
 	background-color: var(--main_color);
-	border: 1em solid var(--main_color_light);
 	padding: 2em;
-}
-.slime section::before, .slime section::after{
-	all: inherit;
-	content: "";
-	position: absolute;
-	bottom: -3.2em;
-	padding: 2em;
-	margin: 0;
-	border-top-right-radius: 0;
-	border-bottom-left-radius: 0;
-}
-.slime section::before{
-	right: 5em;
-	border-bottom: none;
-	border-right: none;
-	transform: rotate(225deg);
-}
-.slime section::after{
-	left: 5em;
-	border-top: none;
-	border-left: none;
-	transform: rotate(45deg);
+	border: .5em solid var(--main_color_light);
+	box-shadow: 0 0 0 .5em var(--main_color);
 }
 .slime section:nth-child(4n+1){
 	--main_hue: 100;
@@ -201,6 +180,9 @@ html.slime{
 	text-shadow: 0 2px hsl(var(--main_hue) 100% 60%);
 }
 
+.slime form{
+	border-top: .1em solid var(--main_color_light);
+}
 .slime form label + *{
 	color: var(--main_color_dark);
 	border: 3px solid var(--main_color_light);
@@ -209,7 +191,7 @@ html.slime{
 
 @media only screen and (max-width: 600px) {
 	.slime section{
-		margin: 1em 0;
+		margin: .5em 0;
 		padding: 1em 0;
 	}
 }

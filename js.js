@@ -44,8 +44,6 @@ function apply_random_border_classes() {
 apply_random_border_classes();
 
 function slime_borders() {
-	for (let i = 0; i < 8; i++) {
-		document.documentElement.style.setProperty(
-			'--random_radius_'+Math.floor(Math.random()*8+1), Math.random()*5+1 + "em");
-	}
+	document.documentElement.style.setProperty(
+		'--random_radius_'+Math.floor(Math.random()*8+1), Math.floor(Math.random()*5+2) + "em");
 }
