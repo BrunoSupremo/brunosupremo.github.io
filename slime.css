@@ -126,9 +126,10 @@ html.slime{
 .slime section{
 	color: var(--background_color);
 	background-color: var(--main_color);
-	padding: 2em;
-	border: .5em solid var(--main_color_light);
-	box-shadow: 0 0 0 .5em var(--main_color);
+	padding: 3em;
+	border: none;
+	outline: .5em solid var(--main_color_light);
+	outline-offset: -1em;
 }
 .slime section:nth-child(4n+1){
 	--main_hue: 100;
@@ -191,7 +192,10 @@ html.slime{
 
 @media only screen and (max-width: 600px) {
 	.slime section{
-		margin: .5em 0;
-		padding: 1em 0;
+		margin: 0;
+		padding: 2em 1.5em;
+	}
+	.slime #sobre img{
+		margin-left: 1em;
 	}
 }

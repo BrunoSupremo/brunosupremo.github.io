@@ -1,27 +1,12 @@
 @charset "utf-8";
-@keyframes bounce_vertical{
-	0%,100%{
-		transform: translateY(0);
-	}
-	50%{
-		transform: translateY(3em);
-	}
-}
-@keyframes bounce_horizontal{
-	0%,100%{
-		transform: translateX(0);
-	}
-	50%{
-		transform: translateX(3em);
-	}
-}
+
 .cyber *{
 	font-family: "Courier New", "OCR A Std", "FreeMono", monospace;
 	text-transform: uppercase;
 	text-shadow: 0 0 1em;
 }
 html.cyber{
-    color-scheme: dark;
+	color-scheme: dark;
 	--main_hue: 200;
 	--main_color: hsl(var(--main_hue) 100% 50%);
 	--secondary_hue: 40;
@@ -54,6 +39,17 @@ html.cyber{
 
 .cyber .glitch{
 	text-transform: lowercase;
+	font-style: italic;
+	text-shadow: none;
+	box-shadow: none;
+	opacity: .5;
+	transition: .5s linear(
+		1 0%, 1 10%,
+		0 10%, 0 20%,
+		1 20%, 1 80%,
+		0 80%, 0 90%,
+		1 90%, 1 100%
+	);
 }
 
 .cyber #options .current{
@@ -73,29 +69,47 @@ html.cyber{
 	box-shadow: var(--main_box_shadow);
 	background: var(--transparent_main_color);
 	background-image: 
-	linear-gradient(0deg, transparent 24%, var(--transparent_main_color) 25%, transparent 26%, transparent 74%, var(--transparent_main_color) 75%, transparent 76%);
+	linear-gradient(transparent 24%, var(--transparent_main_color) 25%, transparent 26%, transparent 74%, var(--transparent_main_color) 75%, transparent 76%);
 	background-size: 50px 50px;
 	animation: screen_lines 10s linear infinite;
 }
 .cyber section::before, .cyber section::after{
 	content: "";
 	position: absolute;
-	width: 0;
-	height: 50%;
-	left: -1em;
-	bottom: 3em;
 	border: 1px solid;
 	color: var(--secondary_color);
 	box-shadow: var(--main_box_shadow);
-	animation: bounce_vertical 10s infinite;
+}
+.cyber section::before{
+	height: 50%;
+	width: 0;
+	left: -1em;
+	top: 25%;
+}
+@keyframes border_piece{
+	0%{
+		left: calc(100% - 1em);
+		scale: 0;
+	}
+	2%, 49%{
+		scale: 1;
+	}
+	50%{
+		scale: 0;
+	}
+	51%, 98%{
+		scale: 1;
+	}
+	100%{
+		left: 0;
+		scale: 0;
+	}
 }
 .cyber section::after{
-	width: 50%;
-	height: 0;
-	left: unset;
-	right: 3em;
-	bottom: -1em;
-	animation-name: bounce_horizontal;
+	height: 4px;
+	width: 1em;
+	bottom: -4px;
+	animation: 10s infinite border_piece linear;
 }
 .cyber section h1{
 	position: absolute;
@@ -105,7 +119,7 @@ html.cyber{
 	box-shadow: var(--main_box_shadow);
 	background: var(--background_color);
 	background-image: 
-	linear-gradient(0deg, transparent 24%, var(--transparent_main_color) 25%, transparent 26%, transparent 74%, var(--transparent_main_color) 75%, transparent 76%);
+	linear-gradient(transparent 24%, var(--transparent_main_color) 25%, transparent 26%, transparent 74%, var(--transparent_main_color) 75%, transparent 76%);
 	background-size: 50px 50px;
 	animation: screen_lines 10s linear infinite;
 }
@@ -130,4 +144,12 @@ html.cyber{
 .cyber button:hover{
 	border-left: 5px double;
 	border-right: 5px double;
+	margin-inline: calc(1em - 3px);
+}
+
+@media only screen and (max-width: 600px) {
+	.cyber section::before{
+		animation: none;
+		content: none;
+	}
 }

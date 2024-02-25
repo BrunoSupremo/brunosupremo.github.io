@@ -43,7 +43,7 @@ html.portfolio{
 	border: .1em solid;
 }
 .portfolio .link_list a{
-	list-style-type: "// ";
+	list-style-type: disclosure-closed;
 }
 
 .portfolio #options .current{

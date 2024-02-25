@@ -22,16 +22,20 @@ function one_second_loop() {
 	}
 }
 
-const glitchables = document.querySelectorAll(":is(a,p,button,h1,h2,label,input)");
-let glitched_element = null;
+const glitchables = document.querySelectorAll(":is(span,img,a,p,button,h1,h2,label,input)");
+let glitched_element = glitchables[0];
 
 function glitch() {
+	if(Math.random()>.5){
+		return
+	}
+	glitched_element.classList.remove("glitch");
 	glitched_element = glitchables[Math.floor(Math.random()*glitchables.length)];
-	glitched_element.classList.add("glitch");
 
+	glitched_element.classList.add("glitch");
 	setTimeout(function(){
 		glitched_element.classList.remove("glitch");
-	}, 20);
+	}, 550);
 }
 
 function apply_random_border_classes() {

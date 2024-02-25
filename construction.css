@@ -5,23 +5,39 @@
 }
 html.construction{
 	--main_color: #111;
-	--secondary_color: #fd0;
-	--background_color: #cc8;
+	--secondary_color: #fd2;
+	--background_color: #985;
+}
+.construction body{
+	background-image: 
+	repeating-linear-gradient(
+		45deg,
+		rgb(0 0 0 / 0.1),
+		transparent .2em,
+		transparent 9.8em,
+		rgb(255 255 255 / 0.1) 10em),
+	repeating-linear-gradient(
+		-45deg,
+		rgb(0 0 0 / 0.1),
+		transparent .2em,
+		transparent 9.8em,
+		rgb(255 255 255 / 0.1) 10em);
 }
 .construction img{
-	padding: 5px;
-	border: .1em dashed var(--main_color);
+	padding: .1em;
+	border: .1em dashed white;
+	border-radius: .5em;
 }
 .construction a{
-	text-decoration-style: dashed;
+	text-decoration-style: solid;
 	text-decoration-thickness: .1em;
 }
 .construction :is(a:hover, a:focus){
-	text-decoration-style: solid;
+	text-decoration-style: dashed;
 }
 
 .construction .link_list a{
-	list-style-type: "||| ";
+	list-style-type: "/// ";
 }
 
 .construction #options .current{
@@ -30,13 +46,20 @@ html.construction{
 
 .construction section{
 	text-align: justify;
-	border: .2em dashed var(--main_color);
+	border: .3em double var(--main_color);
+	border-radius: .5em;
 	background-color: #665;
-	color: #eee;
+	color: #eec;
+}
+.construction section#sobre{
+	border: .2em dashed var(--main_color);
+	border-radius: 1em;
 }
 .construction section h1{
+	margin-inline: -1em;
 	padding: 0 1em;
-	border: .1em dashed;
+	border-radius: .2em;
+	outline: .1em solid var(--main_color);
 	background-image: repeating-linear-gradient(45deg, currentcolor, currentcolor 1em, var(--secondary_color) 1em, var(--secondary_color) 2em);
 	color: var(--main_color);
 	text-shadow:
@@ -50,10 +73,12 @@ html.construction{
 	.1em .1em var(--secondary_color);
 }
 .construction form label + *{
-	border-bottom: .1em dashed;
+	outline: .1em dashed var(--main_color);
+	margin-top: .1em;
+	outline-offset: .05em;
 }
 .construction button{
-	background: transparent;
+	background: #0008;
 	border: .1em dashed;
 	color: var(--secondary_color);
 }
@@ -65,8 +90,12 @@ html.construction{
 @media only screen and (max-width: 600px) {
 	.construction section{
 		margin: 1em 0;
-	}
-	.construction section:nth-child(even){
 		text-align: left;
+	}
+	.construction section h1{
+		margin-inline: auto;
+	}
+	.construction section > p{
+		text-align: justify;
 	}
 }
