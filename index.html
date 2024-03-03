@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="slime.css" type="text/css">
 	<link rel="stylesheet" href="construction.css" type="text/css">
 	<link rel="stylesheet" href="mars.css" type="text/css">
+	<link rel="stylesheet" href="school.css" type="text/css">
 	<script type="text/javascript">
 		document.documentElement.className = localStorage.getItem("theme") || "portfolio";
 	</script>
@@ -54,11 +55,12 @@
 		<h1>Themes</h1>
 		<div id="options">
 			<button class="current" onclick="change_theme(this, 'portfolio')">Portfolio</button>
-			<button lang="en" onclick="change_theme(this, 'cyber')">Cyber</button>
-			<button lang="en" onclick="change_theme(this, 'slime')">Slime</button>
+			<button onclick="change_theme(this, 'cyber')">Cyber</button>
+			<button onclick="change_theme(this, 'slime')">Slime</button>
 			<button onclick="change_theme(this, 'construction')">Construction</button>
 			<button onclick="change_theme(this, 'mars')">Mars</button>
-			<!-- outros temas: love, eco, school paper, military-->
+			<button onclick="change_theme(this, 'school')">School</button>
+			<!-- other theme ideas: love, eco, military, map-->
 			<button onclick="change_theme(this, 'notheme')">No theme</button>
 		</div>
 		<p>The design of a website should resonate with its visitors. <span class="color_changer">Select a theme above</span> and watch this website change right before your eyes.</p>

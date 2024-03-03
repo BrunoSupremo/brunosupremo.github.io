@@ -1,0 +1,172 @@
+@charset "utf-8";
+
+.school *{
+	font-family: cursive;
+	font-style: italic;
+	font-weight: lighter;
+	line-height: 1em;
+}
+html.school{
+	--main_color: #333;
+	--secondary_color: blue;
+	--background_color: #321;
+}
+.school body{
+	background-color: var(--background_color);
+	background-image:
+	repeating-linear-gradient(1deg, #fff1 0, transparent 13px),
+	repeating-linear-gradient(-1deg, #fff1 0, transparent 17px),
+	repeating-linear-gradient(2deg, transparent 0, #fff1 19px),
+	repeating-linear-gradient(-2deg, transparent 0, #fff1 23px),
+	repeating-linear-gradient(
+		var(--background_color) 0,
+		#a85 1px calc(10em - 1px),
+		var(--background_color) 10em,
+		#b96 calc(10em + 1px) calc(20em - 1px),
+		var(--background_color) 20em
+	);
+	background-position-y: 1vh;
+	color: var(--main_color);
+}
+.school body::before,.school body::after{
+	content: "\A\A\A\A 5cm \A\A\A\A\A 10cm \A\A\A\A\A 15cm \A\A\A\A\A 20cm \A\A\A\A\A 25cm \A\A\A\A\A 30cm ";
+	line-height: 1cm;
+	font-size: .4cm;
+	padding-top: .3cm;
+	padding-right: .1cm;
+	text-align: right;
+	white-space: pre;
+	position: absolute;
+	top: 1cm;
+	height: calc(30cm - .25cm + 1px);
+	left: 0;
+	width: 2cm;
+	background-color: #fffc;
+	background-image:
+	repeating-linear-gradient(
+		#333 0 1px,
+		transparent 1px .1cm
+	),
+	repeating-linear-gradient(
+		#333 0 1px,
+		transparent 1px .5cm
+	),
+	repeating-linear-gradient(
+		#333 0 1px,
+		transparent 1px 1cm
+	),
+	repeating-linear-gradient(
+		#333 0 1px,
+		transparent 1px 5cm
+	);
+	background-size: .1cm auto, .2cm auto, .5cm auto, 1cm auto;
+	background-repeat: no-repeat;
+	background-position-x: right;
+	border-top: .25cm solid #fffc;
+	border-bottom: .25cm solid #fffc;
+	border-radius: .2cm;
+	background-clip: padding-box;
+	box-shadow: 0 0 0.25em black, -2em 0 2em -3em black inset;
+}
+.school body::after{
+	rotate: 180deg;
+	top: unset;
+	bottom: 1cm;
+	left: unset;
+	right: 0;
+	z-index: -1;
+}
+.school h1{
+	position: absolute;
+	writing-mode: tb;
+	left: 0;
+	top: 1em;
+}
+.school h1::before{
+	content: "* ";
+}
+.school img{
+	box-shadow: 0 0 .2em black;
+}
+.school .link_list a{
+	list-style-type: "-";
+}
+
+.school section{
+	background-color: #ffe;
+	background-image:
+	repeating-linear-gradient(
+		#888 0 1px,
+		transparent 1px 1em);
+	background-size: auto calc(100% - 2em);
+	background-position: bottom;
+	background-repeat: no-repeat;
+	border: none;
+	box-shadow: 0 0 .2em black;
+	padding-left: 3em;
+}
+.school section::before{
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 2em;
+	border: 1px solid #f33;
+}
+
+.school #sites div{
+	grid-template-rows: 1fr auto 1em;
+}
+.school #options{
+	margin-top: .5em;
+	padding-bottom: .5em;
+}
+.school #options .current{
+	color: #f33;
+}
+
+.school form h2{
+	margin: 1em 0 1rem;
+}
+.school form label + *{
+	background-color: transparent;
+	border: 3px dotted var(--main_color);
+	border-top: none;
+	border-right: none;
+	height: 2em;
+	padding: .5em 0 0 .5em;
+	color: var(--secondary_color);
+}
+.school form label + textarea{
+	padding-top: 1em;
+	height: 3em;
+}
+.school form label + *::placeholder{
+	color: #f33;
+}
+.school form label + *:focus{
+	outline: none;
+}
+.school #contato form button{
+	margin: 1.4em auto .5em;
+}
+.school button{
+	border: none;
+	background: transparent;
+	outline: 3px double;
+	border-radius: 1em;
+}
+.school button:hover{
+	color: var(--secondary_color);
+}
+
+@media only screen and (max-width: 600px) {
+	.school section{
+		margin: 1em 0;
+		padding: 1em 0 1em 2em;
+		overflow: hidden;
+	}
+	.school section *{
+		z-index: 1;
+	}
+}
