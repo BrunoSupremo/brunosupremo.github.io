@@ -161,7 +161,7 @@ html.slime{
 	text-shadow: 0 2px var(--main_color_light);
 	transition: all 1s linear, padding .3s, margin .3s;
 }
-.slime button:hover{
+.slime button:hover, .slime button.current{
 	padding: 1em .5em;
 	margin: .5em 1.5em;
 }

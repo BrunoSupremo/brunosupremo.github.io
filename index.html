@@ -13,7 +13,10 @@
 	<link rel="stylesheet" href="mars.css" type="text/css">
 	<link rel="stylesheet" href="school.css" type="text/css">
 	<script type="text/javascript">
-		document.documentElement.className = localStorage.getItem("theme") || "portfolio";
+		if(!localStorage.getItem("theme")){
+			localStorage.setItem("theme", "portfolio");
+		}
+		document.documentElement.className = localStorage.getItem("theme");
 	</script>
 </head>
 <body>
@@ -24,25 +27,25 @@
 	</section>
 	<section id="sites" class="link_list">
 		<h1>Sites</h1>
-		<div>
+		<div class="highlight">
 			<img src="quiosque_ventania.webp" alt="Site preview">
 			<h2>Quiosque Ventania</h2>
 			<p>Kiosk at Praia do Centro in Itanhaém</p>
 			<a href="https://brunosupremo.github.io/Quiosque-Ventania/">Visit site</a>
 		</div>
-		<div>
+		<div class="highlight">
 			<img src="nn_bartender.webp" alt="Site preview">
 			<h2>NN Bartenders</h2>
 			<p>Bar services for events</p>
 			<a href="https://brunosupremo.github.io/nnBartender/">Visit site</a>
 		</div>
-		<div>
+		<div class="highlight">
 			<img src="youtuber.webp" alt="Site preview">
 			<h2>Youtuber</h2>
 			<p>Youtuber/Gamer site</p>
 			<a href="https://brunosupremo.github.io/BrunoSupremo-youtube-channel-site/">Visit site</a>
 		</div>
-		<div>
+		<div class="highlight">
 			<img src="stonehearth_builds.webp" alt="Site preview">
 			<h2>StoneHearth Builds</h2>
 			<p>Virtual Building Sharing Network</p>
@@ -53,25 +56,29 @@
 	</section>
 	<section id="temas">
 		<h1>Themes</h1>
-		<div id="options">
-			<button class="current" onclick="change_theme(this, 'portfolio')">Portfolio</button>
-			<button onclick="change_theme(this, 'cyber')">Cyber</button>
-			<button onclick="change_theme(this, 'slime')">Slime</button>
-			<button onclick="change_theme(this, 'construction')">Construction</button>
-			<button onclick="change_theme(this, 'mars')">Mars</button>
-			<button onclick="change_theme(this, 'school')">School</button>
+		<div id="options" class="highlight">
+			<button onclick="change_theme(this)" data-theme="portfolio">Portfolio</button>
+			<button onclick="change_theme(this)" data-theme="cyber">Cyber</button>
+			<button onclick="change_theme(this)" data-theme="slime">Slime</button>
+			<button onclick="change_theme(this)" data-theme="construction">Construction</button>
+			<button onclick="change_theme(this)" data-theme="mars">Mars</button>
+			<button onclick="change_theme(this)" data-theme="school">School</button>
 			<!-- other theme ideas: love, eco, military, map-->
-			<button onclick="change_theme(this, 'notheme')">No theme</button>
+			<button onclick="change_theme(this)" data-theme="notheme">No theme</button>
+			<script type="text/javascript">
+				let theme = localStorage.getItem("theme");
+				document.querySelector("[data-theme='"+theme+"']").classList.add("current");
+			</script>
 		</div>
 		<p>The design of a website should resonate with its visitors. <span class="color_changer">Select a theme above</span> and watch this website change right before your eyes.</p>
 	</section>
 	<section id="contato">
 		<h1>Contacts</h1>
-		<p class="link_list">
+		<p class="link_list highlight">
 			<a href="mailto:bruno_mussoi@hotmail.com">bruno_mussoi@hotmail.com</a>
 			<a href="https://github.com/BrunoSupremo">github.com/BrunoSupremo</a>
 		</p>
-		<form action="https://formspree.io/bruno_mussoi@hotmail.com" method="POST">
+		<form action="https://formbold.com/s/3V085" method="POST">
 			<h2>Or quick form:</h2>
 			<label>
 				Name:
@@ -80,7 +87,7 @@
 			<label>
 				E-mail:
 			</label>
-			<input type="email" name="_replyto" placeholder="your_email@example.com (optional)">
+			<input type="email" name="_replyto" placeholder="email@example.com (optional)">
 			<label>
 				Message:
 			</label>

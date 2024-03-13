@@ -4,36 +4,15 @@
 	font-family: "Verdana", sans-serif;
 }
 html.portfolio{
-	--main_color: hsl(200deg 100% 20%);
+	--main_color: white;
 	--secondary_color: hsl(120deg 70% 60%);
-	--background_color: white;
+	--background_color: hsl(200deg 100% 20%);
 }
 .portfolio body{
-	color: var(--background_color);
-	background-color: hsl(200deg 50% 10%);
-	background-image:
-	repeating-linear-gradient(45deg,
-		transparent 0em,
-		hsl(200deg 50% 10%) 0em,
-		hsl(200deg 50% 10%) 2em,
-		transparent 2em,
-		transparent 6em
-		),
-	repeating-linear-gradient(135deg,
-		transparent 2em,
-		var(--main_color) 2em,
-		var(--main_color) 2.1em,
-		transparent 2.1em,
-		transparent 6em,
-		var(--background_color) 6em,
-		var(--background_color) 6.1em,
-		transparent 6.1em,
-		transparent 10em,
-		var(--secondary_color) 10em,
-		var(--secondary_color) 10.1em,
-		transparent 10.1em,
-		transparent 14em
-		);
+	color: var(--main_color);
+	background-color: #123;
+	background-image: radial-gradient(circle at top, #fff2, #0006);
+	background-attachment: fixed;
 }
 .portfolio h1{
 	margin-bottom: 1em;
@@ -48,46 +27,39 @@ html.portfolio{
 
 .portfolio #options .current{
 	box-shadow: 0 0 0 3em var(--secondary_color) inset;
-	color: var(--background_color);
+	color: var(--main_color);
 }
 
 .portfolio section{
-	padding: 3em;
-	background-image: linear-gradient(135deg,
-		var(--main_color) 2em,
-		var(--background_color) 2em,
-		var(--background_color) 3em,
-		var(--main_color) 3em,
-		var(--main_color) calc(100% - 3em),
-		var(--background_color) calc(100% - 3em),
-		var(--background_color) calc(100% - 2em),
-		var(--main_color) calc(100% - 2em)
-		);
+	text-shadow: 1px 2px #0006;
+	padding: 2em 3em 1em;
+	background-image: radial-gradient(ellipse at top, #fff2, #0006);
+	background-color: var(--background_color);
 	border-radius: .5em;
-	border: .1em solid var(--background_color);
-	box-shadow: 0 0 1em black inset;
+	border: 2px solid #fff3;
+	box-shadow: 0 0 0.5em black;
 }
 .portfolio form label + *{
-	background: var(--background_color);
+	background: var(--main_color);
 	border: solid;
 	border-width: 0 .2em;
-	color: var(--main_color);
+	color: var(--background_color);
 }
 .portfolio form label + *:focus{
 	outline-color: var(--secondary_color);
 }
 .portfolio button{
 	color: var(--secondary_color);
-	border: .1em solid;
-	border-radius: .5em;
+	border: .1em solid var(--secondary_color);
 	background: transparent;
-	transition: .3s;
-	box-shadow: 0 0 var(--background_color) inset;
+	box-shadow: 0 0 transparent inset;
 }
 .portfolio button:hover{
-	box-shadow: 10em 0 var(--background_color) inset;
+	box-shadow: 0 0 0 3px var(--background_color) inset;
 	border-color: var(--secondary_color);
 	color: var(--main_color);
+	outline: 1px solid #fff3;
+	outline-offset: 2px;
 }
 
 .portfolio #sites > a:last-child{
@@ -100,9 +72,45 @@ html.portfolio{
 	margin-top: 2em;
 }
 
+.portfolio .highlight{
+	--overflow: 3em;
+	padding: .5em var(--overflow);
+	margin-inline: calc(var(--overflow) * -1);
+	backdrop-filter: brightness(1.1);
+	border-block: inherit;
+}
+
 @media only screen and (max-width: 600px) {
+	/* small size */
 	.portfolio section{
 		margin: 1em 0;
 		padding: 1em;
+	}
+	.portfolio .highlight{
+		--overflow: 1em;
+	}
+}
+@media only screen and not (max-width: 600px) {
+	/* big size */
+	.portfolio section#sobre{
+		margin-top: 4em;
+		padding: 0 1em 0 0;
+		grid-template-areas:
+		"img h2"
+		"img p";
+	}
+	.portfolio section#sobre img{
+		position: relative;
+		margin-left: -1em;
+		grid-area: img;
+		height: auto;
+		width: auto;
+		place-self: center;
+		box-shadow: inherit;
+		border:inherit;
+		z-index: 1;
+	}
+	.portfolio section#sobre h2{
+		margin: .5em auto 0 0;
 	}
 }

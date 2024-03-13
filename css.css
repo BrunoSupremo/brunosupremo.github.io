@@ -99,28 +99,27 @@ button{
 	"img h2"
 	"p p";
 	grid-template-columns: auto 1fr;
+	grid-template-rows: 0fr;
 }
 #sobre img{
 	margin-right: 2em;
 }
 #sobre h2{
 	margin: auto auto 0 0;
+	grid-area: h2;
 }
 #sobre p{
 	grid-area: p;
 }
 
 #sites div{
-	margin: 2em 0;
+	margin-block: 2em;
 	display: grid;
 	grid-template-areas: 
 	"img h2"
 	"img p"
 	"img a";
 	grid-template-columns: auto 1fr;
-}
-#sites div:first-of-type{
-	margin-top: 1em;
 }
 #sites div img{
 	grid-area: img;

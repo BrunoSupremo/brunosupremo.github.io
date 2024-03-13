@@ -1,4 +1,8 @@
-function change_theme(button, theme) {
+function change_theme(button) {
+	let theme = button.dataset.theme;
+	if(localStorage.getItem("theme") == theme){
+		return false;
+	}
 	document.querySelector("#options .current").classList.remove("current");
 	button.classList.add("current");
 

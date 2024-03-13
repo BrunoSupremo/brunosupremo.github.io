@@ -32,13 +32,14 @@ html.school{
 	content: "\A\A\A\A 5cm \A\A\A\A\A 10cm \A\A\A\A\A 15cm \A\A\A\A\A 20cm \A\A\A\A\A 25cm \A\A\A\A\A 30cm ";
 	line-height: 1cm;
 	font-size: .4cm;
-	padding-top: .3cm;
+	--padding: .3cm;
+	padding-top: var(--padding);
 	padding-right: .1cm;
 	text-align: right;
 	white-space: pre;
 	position: absolute;
 	top: 1cm;
-	height: calc(30cm - .25cm + 1px);
+	height: calc(30cm - var(--padding) + 1px);
 	left: 0;
 	width: 2cm;
 	background-color: #fffc;
