@@ -54,7 +54,7 @@ html.portfolio{
 	background: transparent;
 	box-shadow: 0 0 transparent inset;
 }
-.portfolio button:hover{
+.portfolio :is(button:hover,button:focus){
 	box-shadow: 0 0 0 3px var(--background_color) inset;
 	border-color: var(--secondary_color);
 	color: var(--main_color);
@@ -77,40 +77,41 @@ html.portfolio{
 	padding: .5em var(--overflow);
 	margin-inline: calc(var(--overflow) * -1);
 	backdrop-filter: brightness(1.1);
-	border-block: inherit;
+	border-block: .1em solid #fff6;
+}
+
+.portfolio section#sobre{
+	padding: 0 1em 0 0;
+	grid-template-areas:
+	"img h2"
+	"img p";
+	grid-template-columns: 11em 1fr;
+}
+.portfolio section#sobre img{
+	position: absolute;
+	height: 10em;
+	width: 10em;
+	object-fit: cover;
+	place-self: center;
+	box-shadow: inherit;
+	border:inherit;
+}
+.portfolio section#sobre h2{
+	margin: .5em auto 0 0;
 }
 
 @media only screen and (max-width: 600px) {
 	/* small size */
 	.portfolio section{
-		margin: 1em 0;
 		padding: 1em;
 	}
 	.portfolio .highlight{
 		--overflow: 1em;
 	}
-}
-@media only screen and not (max-width: 600px) {
-	/* big size */
 	.portfolio section#sobre{
-		margin-top: 4em;
-		padding: 0 1em 0 0;
-		grid-template-areas:
-		"img h2"
-		"img p";
-	}
-	.portfolio section#sobre img{
-		position: relative;
-		margin-left: -1em;
-		grid-area: img;
-		height: auto;
-		width: auto;
-		place-self: center;
-		box-shadow: inherit;
-		border:inherit;
-		z-index: 1;
+		grid-template-columns: 10em 1fr;
 	}
 	.portfolio section#sobre h2{
-		margin: .5em auto 0 0;
+		margin: .5em auto 0 .5em;
 	}
 }

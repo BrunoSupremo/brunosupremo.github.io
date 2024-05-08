@@ -2,107 +2,64 @@
 
 .slime *{
 	font-family: "Comic Sans MS", "Comic Sans", "Bradley Hand", "Chalkboard SE", "Comic Neue", sans-serif;
-	transition: 4s linear(0 0%, 0.22 2.1%, 0.86 6.5%, 1.11 8.6%, 1.3 10.7%, 1.35 11.8%, 1.37 12.9%, 1.37 13.7%, 1.36 14.5%, 1.32 16.2%, 1.03 21.8%, 0.94 24%, 0.89 25.9%, 0.88 26.85%, 0.87 27.8%, 0.87 29.25%, 0.88 30.7%, 0.91 32.4%, 0.98 36.4%, 1.01 38.3%, 1.04 40.5%, 1.05 42.7%, 1.05 44.1%, 1.04 45.7%, 1 53.3%, 0.99 55.4%, 0.98 57.5%, 0.99 60.7%, 1 68.1%, 1.01 72.2%, 1 86.7%, 1 100%);
+	transition: var(--border-radius_transition);
 	text-shadow: 0 2px var(--main_color_dark);
-}
-.slime.transitioning *{
-	transition: .5s linear;
 }
 .slime .random_slime_1{
 	border-radius:
 	var(--random_radius_1)
 	var(--random_radius_2)
 	var(--random_radius_3)
-	var(--random_radius_4)
-	/
-	var(--random_radius_5)
-	var(--random_radius_6)
-	var(--random_radius_7)
-	var(--random_radius_8);
+	var(--random_radius_4);
 }
 .slime .random_slime_2{
 	border-radius:
 	var(--random_radius_2)
 	var(--random_radius_3)
 	var(--random_radius_4)
-	var(--random_radius_5)
-	/
-	var(--random_radius_6)
-	var(--random_radius_7)
-	var(--random_radius_8)
-	var(--random_radius_1);
+	var(--random_radius_5);
 }
 .slime .random_slime_3{
 	border-radius:
 	var(--random_radius_3)
 	var(--random_radius_4)
 	var(--random_radius_5)
-	var(--random_radius_6)
-	/
-	var(--random_radius_7)
-	var(--random_radius_8)
-	var(--random_radius_1)
-	var(--random_radius_2);
+	var(--random_radius_6);
 }
 .slime .random_slime_4{
 	border-radius:
 	var(--random_radius_4)
 	var(--random_radius_5)
 	var(--random_radius_6)
-	var(--random_radius_7)
-	/
-	var(--random_radius_8)
-	var(--random_radius_1)
-	var(--random_radius_2)
-	var(--random_radius_3);
+	var(--random_radius_7);
 }
 .slime .random_slime_5{
 	border-radius:
 	var(--random_radius_5)
 	var(--random_radius_6)
 	var(--random_radius_7)
-	var(--random_radius_8)
-	/
-	var(--random_radius_1)
-	var(--random_radius_2)
-	var(--random_radius_3)
-	var(--random_radius_4);
+	var(--random_radius_8);
 }
 .slime .random_slime_6{
 	border-radius:
 	var(--random_radius_6)
 	var(--random_radius_7)
 	var(--random_radius_8)
-	var(--random_radius_1)
-	/
-	var(--random_radius_2)
-	var(--random_radius_3)
-	var(--random_radius_4)
-	var(--random_radius_5);
+	var(--random_radius_1);
 }
 .slime .random_slime_7{
 	border-radius:
 	var(--random_radius_7)
 	var(--random_radius_8)
 	var(--random_radius_1)
-	var(--random_radius_2)
-	/
-	var(--random_radius_3)
-	var(--random_radius_4)
-	var(--random_radius_5)
-	var(--random_radius_6);
+	var(--random_radius_2);
 }
 .slime .random_slime_8{
 	border-radius:
 	var(--random_radius_8)
 	var(--random_radius_1)
 	var(--random_radius_2)
-	var(--random_radius_3)
-	/
-	var(--random_radius_4)
-	var(--random_radius_5)
-	var(--random_radius_6)
-	var(--random_radius_7);
+	var(--random_radius_3);
 }
 html.slime{
 	--main_hue: 100;
@@ -118,6 +75,9 @@ html.slime{
 	--random_radius_6: 7em;
 	--random_radius_7: 2em;
 	--random_radius_8: 3em;
+
+	--transition_function: linear(0 0%, 0.22 2.1%, 0.86 6.5%, 1.11 8.6%, 1.3 10.7%, 1.35 11.8%, 1.37 12.9%, 1.37 13.7%, 1.36 14.5%, 1.32 16.2%, 1.03 21.8%, 0.94 24%, 0.89 25.9%, 0.88 26.85%, 0.87 27.8%, 0.87 29.25%, 0.88 30.7%, 0.91 32.4%, 0.98 36.4%, 1.01 38.3%, 1.04 40.5%, 1.05 42.7%, 1.05 44.1%, 1.04 45.7%, 1 53.3%, 0.99 55.4%, 0.98 57.5%, 0.99 60.7%, 1 68.1%, 1.01 72.2%, 1 86.7%, 1 100%);
+	--border-radius_transition: border-radius 4s var(--transition_function);
 }
 .slime body{
 	background-color: #123;
@@ -126,10 +86,10 @@ html.slime{
 .slime section{
 	color: var(--background_color);
 	background-color: var(--main_color);
-	padding: 3em;
+	padding: 2em;
 	border: none;
-	outline: .5em solid var(--main_color_light);
-	outline-offset: -1em;
+	outline: .25em solid var(--main_color_light);
+	outline-offset: -.5em;
 }
 .slime section:nth-child(4n+1){
 	--main_hue: 100;
@@ -159,14 +119,14 @@ html.slime{
 .slime button{
 	border: none;
 	text-shadow: 0 2px var(--main_color_light);
-	transition: all 1s linear, padding .3s, margin .3s;
+	transition: var(--border-radius_transition), padding 1s var(--transition_function), margin 1s var(--transition_function);
 }
-.slime button:hover, .slime button.current{
+.slime :is(button:hover,button:focus), .slime button.current{
 	padding: 1em .5em;
-	margin: .5em 1.5em;
+	margin: -.5em .5em;
 }
 
-.slime #contato button:hover{
+.slime #contato :is(button:hover,button:focus){
 	padding: 1em .5em;
 	margin: .5em auto;
 }
@@ -192,8 +152,7 @@ html.slime{
 
 @media only screen and (max-width: 600px) {
 	.slime section{
-		margin: 0;
-		padding: 2em 1.5em;
+		padding-inline: 1em;
 	}
 	.slime #sobre img{
 		margin-left: 1em;

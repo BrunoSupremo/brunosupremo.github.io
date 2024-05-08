@@ -1,0 +1,127 @@
+@charset "utf-8";
+
+.w95 *{
+	font-family: 'MS Sans Serif', sans-serif;
+}
+html.w95{
+	--secondary_color: white;
+	--background_color: lightgray;
+}
+.w95 body{
+	background-color: teal;
+	color: black;
+}
+.w95 section{
+	background-color: var(--background_color);
+	border: 2px outset;
+	box-shadow: 1px 1px black;
+}
+.w95 img{
+	border: 2px inset;
+}
+.w95 h1{
+	background-color: darkblue;
+	font-size: 1em;
+	color: var(--secondary_color);
+	margin: calc(1px - 1em);
+	margin-bottom: 1em;
+	padding: 2px 3px;
+	display: flex;
+	align-items: center;
+}
+.w95 h1::after{
+	content: "✖";
+	background-color: var(--background_color);
+	border: 2px outset;
+	box-shadow: 1px 1px black;
+	color: black;
+	font-size: .75em;
+	aspect-ratio: 1;
+	display: flex;
+	height: 1em;
+	align-items: center;
+	justify-content: center;
+	margin-left: auto;
+}
+.w95 section h1::before{
+	height: 1em;
+	display: flex;
+	align-items: center;
+}
+.w95 #sites h1::before{
+	content: "📑";
+}
+.w95 #temas h1::before{
+	content: "🎨";
+}
+.w95 #contato h1::before{
+	content: "💾";
+}
+.w95 h2{
+	font-size: 1em;
+	font-weight: bold;
+}
+.w95 .link_list a{
+	list-style-type: none;
+	color: blue;
+}
+
+.w95 .highlight {
+	border: 2px inset white;
+	padding: 1em;
+	margin: 1em;
+}
+.w95 .color_changer {
+	color: #0000FF;
+}
+
+.w95 form label + *{
+	border: 2px inset;
+}
+.w95 form label + *:focus{
+    outline: 2px dotted gray;
+    outline-offset: -4px;
+}
+.w95 button{
+	background-color: var(--background_color);
+	border: 1px outset white;
+	box-shadow: 1px 1px black;
+	padding: .25em .5em;
+	font-family: 'MS Sans Serif', Geneva, sans-serif;
+}
+.w95 button:active {
+	border-style: inset;
+	box-shadow: -1px -1px black;
+}
+.w95 :is(button:hover,button:focus){
+	outline: 1px dotted;
+	outline-offset: -3px;
+}
+
+.w95 #sobre {
+	grid-template-areas:
+	"img h2"
+	"img p";
+}
+.w95 #sites div {
+	grid-template-rows: 1em 1fr 1em;
+}
+.w95 #sites div > *:not(img) {
+	text-align: right;
+	margin: 0;
+}
+
+.w95 #options{
+	display: grid;
+	gap: 1em;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+.w95 #options .current{
+	color: gray;
+}
+
+@media only screen and (max-width: 600px) {
+	.w95 section h1{
+		margin: 0;
+	}
+}

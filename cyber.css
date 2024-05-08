@@ -54,7 +54,7 @@ html.cyber{
 
 .cyber #options .current{
 	border-inline-width: 5px;
-	margin-inline: calc(1em - 3px);
+	margin-inline: -3px;
 }
 
 @keyframes screen_lines{
@@ -142,10 +142,9 @@ html.cyber{
 	box-shadow: var(--main_box_shadow);
 	color: var(--secondary_color);
 }
-.cyber button:hover{
-	border-left: 5px double;
-	border-right: 5px double;
-	margin-inline: calc(1em - 3px);
+.cyber :is(button:hover,button:focus){
+	border-inline: 5px double;
+	margin-inline: -3px;
 }
 
 @media only screen and (max-width: 600px) {

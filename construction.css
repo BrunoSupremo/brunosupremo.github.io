@@ -41,25 +41,35 @@ html.construction{
 }
 
 .construction #options .current{
-	border-width: 2px 5px;
+	border-width: 1px 2px;
+	rotate: 10deg;
 }
 
 .construction section{
 	text-align: justify;
-	border: .3em double var(--main_color);
+	border: 0.25em groove #998;
 	border-radius: .5em;
 	background-color: #665;
 	color: #eec;
+	margin-inline: 1em;
 }
-.construction section#sobre{
-	border: .2em dashed var(--main_color);
-	border-radius: 1em;
+.construction section#sobre::before{
+	content: "";
+    position: absolute;
+    height: calc(100% + 1em);
+    width: .5em;
+    top: -.5em;
+    left: -.25em;
+    border-radius: 1em;
+    outline: .15em outset var(--main_color);
+    background-image: repeating-linear-gradient(45deg, var(--main_color), var(--main_color) 1em, var(--secondary_color) 1em, var(--secondary_color) 2em);
 }
 .construction section h1{
 	margin-inline: -1em;
 	padding: 0 1em;
 	border-radius: .2em;
-	outline: .1em solid var(--main_color);
+	outline: .1em outset var(--main_color);
+    box-shadow: 0 0 .3em;
 	background-image: repeating-linear-gradient(45deg, currentcolor, currentcolor 1em, var(--secondary_color) 1em, var(--secondary_color) 2em);
 	color: var(--main_color);
 	text-shadow:
@@ -83,14 +93,13 @@ html.construction{
 	color: var(--secondary_color);
 }
 .construction button:hover{
-	border-bottom-style: solid;
-	border-top-style: solid;
+	border-style: solid dotted;
 }
 
 @media only screen and (max-width: 600px) {
 	.construction section{
-		margin: 1em 0;
 		text-align: left;
+		margin-inline: 0;
 	}
 	.construction section h1{
 		margin-inline: auto;

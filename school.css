@@ -103,7 +103,7 @@ html.school{
 	background-position: bottom;
 	background-repeat: no-repeat;
 	border: none;
-	box-shadow: 0 0 .2em black;
+	box-shadow: 0 .1em .3em #0008;
 	padding-left: 3em;
 }
 .school section::before{
@@ -157,13 +157,12 @@ html.school{
 	outline: 3px double;
 	border-radius: 1em;
 }
-.school button:hover{
+.school :is(button:hover,button:focus){
 	color: var(--secondary_color);
 }
 
 @media only screen and (max-width: 600px) {
 	.school section{
-		margin: 1em 0;
 		padding: 1em 0 1em 2em;
 		overflow: hidden;
 	}

@@ -2,11 +2,7 @@
 *{
 	font-size: 1em;
 }
-.transitioning *{
-	transition: .5s;
-}
 html{
-	font-size: 20px;
 	scroll-behavior: smooth;
 	--main_color: black;
 	--secondary_color: blue;
@@ -15,16 +11,17 @@ html{
 body{
 	position: relative;
 	margin:0;
-	padding:0;
+	padding:2em;
 	border:0;
 	color: var(--main_color);
 	background: var(--background_color);
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;
-	align-content: space-around;
+	justify-content: center;
+	align-content: center;
 	align-items: center;
 	flex-wrap: wrap;
+	gap: 3em;
 }
 h1, h2{
 	font-weight: normal;
@@ -37,8 +34,8 @@ h2{
 	font-size: 1.5em;
 }
 img{
-	width: 100px;
-	height: 100px;
+	width: 6em;
+	height: 6em;
 	object-fit: contain;
 	margin-right: 1em;
 }
@@ -60,13 +57,18 @@ a:hover, a:focus{
 
 #options{
 	display: flex;
+	justify-content: center;
 	flex-wrap: wrap;
-	justify-content: space-evenly;
+	align-content: center;
+	align-items: center;
+	flex-direction: row;
+	gap: 2em;
+	padding: 1em;
 }
 
 section{
 	position: relative;
-	margin: 3em;
+	margin: 0;
 	padding: 1em;
 	max-width: 50ch;
 	border-bottom: 1px solid;
@@ -89,7 +91,7 @@ form label + *{
 }
 button{
 	cursor: pointer;
-	margin: 1em;
+	margin: 0;
 	padding: .5em 1em;
 }
 
@@ -99,10 +101,9 @@ button{
 	"img h2"
 	"p p";
 	grid-template-columns: auto 1fr;
-	grid-template-rows: 0fr;
 }
 #sobre img{
-	margin-right: 2em;
+	grid-area: img;
 }
 #sobre h2{
 	margin: auto auto 0 0;
@@ -138,8 +139,11 @@ button{
 }
 
 @media only screen and (max-width: 600px) {
+	/* small size */
+	body{
+		padding: 0;
+	}
 	section{
-		margin: 2em 0;
 		padding: 0;
 		flex: auto;
 	}
