@@ -50,6 +50,9 @@ a:hover, a:focus{
 	display: list-item;
 	list-style-position: inside;
 }
+::marker{
+	color: inherit;
+}
 
 .color_changer{
 	color: var(--secondary_color);

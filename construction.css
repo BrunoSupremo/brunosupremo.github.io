@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 .construction *{
-	font-family: "Impact", "Blippo", "Stencil Std", fantasy, monospace;
+	font-family: "Impact", "Blippo", "Stencil Std", "Arial Black", fantasy, monospace, sans-serif;
 }
 html.construction{
 	--main_color: #111;
