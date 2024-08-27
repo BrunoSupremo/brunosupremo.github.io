@@ -6,12 +6,17 @@
 html.portfolio{
 	--main_color: white;
 	--secondary_color: hsl(120deg 70% 60%);
-	--background_color: hsl(200deg 100% 20%);
+	--background_color: hsl(200deg 100% 25%);
 }
 .portfolio body{
 	color: var(--main_color);
 	background-color: #123;
-	background-image: radial-gradient(circle at top, #fff2, #0006);
+	background-image:
+	radial-gradient(circle at top, #fff2, #0006),
+	conic-gradient(from 170deg at 82% 48%, #2483, #2983),
+	conic-gradient(from 26deg at 22% 77%, #0163, #5343),
+	conic-gradient(from 99deg at 10% 45%, #3133, #7333),
+	conic-gradient(from 62deg at 46% 57%, #2963, #0783);
 	background-attachment: fixed;
 }
 .portfolio h1{
