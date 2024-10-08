@@ -1,0 +1,107 @@
+@charset "utf-8";
+
+.casino *{
+	font-family: "Verdana", sans-serif;
+}
+html.casino{
+	--main_color: white;
+	--secondary_color: yellow;
+	--background_color: green;
+}
+.casino body{
+	background:seagreen;
+	box-shadow: 0 0 100em #0008 inset;
+}
+.casino img{
+	outline: 3px double gold;
+	outline-offset: 1px;
+	border-radius: .1em;
+}
+.casino .link_list a{
+	list-style-type: "♣️ ";
+}
+
+.casino #options .current::before,.casino #options .current::after{
+	content: "♦♦♦";
+}
+
+.casino section{
+	background: radial-gradient(ellipse at bottom, red, darkred);
+	padding: 1.5em 3em;
+	outline: .5em dotted gold;
+	outline-offset: -0.75em;
+	border: 1em solid darkorange;
+	border-radius: 3em;
+	box-shadow: 0 0 2em gold;
+}
+.casino :is(h1, section > h2){
+	color: white;
+	padding-inline: .5em;
+	font-weight: bold;
+	text-shadow: 0px 0px 1em gold, -2px 0px .1em gold, 2px 0px .1em gold, 0px -2px .1em gold, 0px 2px .1em gold;
+	text-transform: uppercase;
+	letter-spacing: .2em;
+	font-family: serif;
+	margin-bottom: 0.5em;
+}
+.casino .color_changer{
+	color: red;
+	background: white;
+	border-radius: 1em;
+	padding-inline: .5em;
+	font-weight: bold;
+	text-shadow: 0 1px BLACK;
+	font-variant-caps: petite-caps;
+	letter-spacing: .15em;
+}
+.casino .highlight{
+	background: forestgreen;
+	margin-inline: -1em;
+	padding: .5em;
+	border: .15em solid darkgreen;
+	border-radius: .5em;
+	box-shadow: 0 0 .1em black, 0 0 2em -1em black inset;
+}
+.casino form label + *{
+	border-radius: 0.2em;
+	border: 3px double red;
+}
+.casino form label + *:focus{
+	outline: 1px dashed white;
+}
+.casino button{
+	background-color: black;
+	color: white;
+	border-radius: 2em;
+	border: 3px dashed;
+	text-transform: uppercase;
+	padding-inline: 0;
+}
+.casino button::before,.casino button::after{
+	content: "♦";
+	padding-inline: 1ch;
+}
+.casino button:nth-child(odd){
+	background-color:red;
+}
+.casino button:last-of-type{
+	background-color: white;
+	color: black;
+	border-style: dotted;
+}
+.casino :not(.current):is(button:hover,button:focus)::before,
+.casino :not(.current):is(button:hover,button:focus)::after{
+	content: "♦♦";
+	padding-inline: .6ch;
+}
+
+@media only screen and (max-width: 600px) {
+	.casino section{
+		padding: 1em;
+		box-shadow: 0 0 .75em gold;
+	}
+	.casino .color_changer{
+		text-wrap: nowrap;
+		letter-spacing: .05em;
+	}
+}

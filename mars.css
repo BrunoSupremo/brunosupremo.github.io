@@ -32,6 +32,7 @@ html.mars{
 	border: 1px solid;
 	border-width: 0 2px 5px;
 	color: var(--main_color);
+	box-shadow: 0 0 1em -.5em white;
 }
 .mars .link_list a{
 	list-style-type: "⊙ ";
