@@ -84,6 +84,10 @@ html.slime{
 }
 
 .slime section{
+	--main_color: hsl(var(--main_hue) 100% 50%);
+	--main_color_light: hsl(var(--main_hue) 100% 75%);
+	--main_color_dark: hsl(var(--main_hue) 100% 25%);
+
 	color: var(--background_color);
 	background-color: var(--main_color);
 	padding: 2em;
@@ -93,27 +97,15 @@ html.slime{
 }
 .slime section:nth-child(4n+1){
 	--main_hue: 100;
-	--main_color: hsl(var(--main_hue) 100% 50%);
-	--main_color_light: hsl(var(--main_hue) 100% 75%);
-	--main_color_dark: hsl(var(--main_hue) 100% 25%);
 }
 .slime section:nth-child(4n+2){
 	--main_hue: 190;
-	--main_color: hsl(var(--main_hue) 100% 50%);
-	--main_color_light: hsl(var(--main_hue) 100% 75%);
-	--main_color_dark: hsl(var(--main_hue) 100% 25%);
 }
 .slime section:nth-child(4n+3){
 	--main_hue: 320;
-	--main_color: hsl(var(--main_hue) 100% 50%);
-	--main_color_light: hsl(var(--main_hue) 100% 75%);
-	--main_color_dark: hsl(var(--main_hue) 100% 25%);
 }
 .slime section:nth-child(4n+4){
 	--main_hue: 50;
-	--main_color: hsl(var(--main_hue) 100% 50%);
-	--main_color_light: hsl(var(--main_hue) 100% 75%);
-	--main_color_dark: hsl(var(--main_hue) 100% 25%);
 }
 
 .slime button{
