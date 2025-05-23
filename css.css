@@ -132,10 +132,6 @@ button{
 #sites div > *:not(img){
 	margin: auto auto auto 0;
 }
-#sites > a:last-child{
-	display: block;
-	text-align: center;
-}
 
 #contato button{
 	display: block;
@@ -159,9 +155,6 @@ button{
 	}
 	#sites h2{
 		text-align: left;
-	}
-	#sites > a:last-child{
-		margin-bottom: 1em;
 	}
 }
 
