@@ -16,6 +16,7 @@
 	<link rel="stylesheet" href="w95.css" type="text/css">
 	<link rel="stylesheet" href="casino.css" type="text/css">
 	<link rel="stylesheet" href="comics.css" type="text/css">
+	<link rel="stylesheet" href="noir.css" type="text/css">
 	<script type="text/javascript">
 		if(!localStorage.getItem("theme")){
 			localStorage.setItem("theme", "portfolio");
@@ -29,7 +30,7 @@
 		<h2>Hello,</h2>
 		<p>I'm <span class="color_changer">Bruno</span>, programmer and designer. On this website you can see some of my projects and experiences.</p>
 	</section>
-	<section id="sites" class="link_list">
+	<section id="sites">
 		<h1>Sites</h1>
 		<div class="highlight">
 			<img src="infinite_monkey.webp" alt="Site preview">
@@ -70,6 +71,7 @@
 			<button onclick="change_theme(this)" data-theme="w95">90s PC</button>
 			<button onclick="change_theme(this)" data-theme="casino">Casino</button>
 			<button onclick="change_theme(this)" data-theme="comics">Comics</button>
+			<button onclick="change_theme(this)" data-theme="noir">Noir</button>
 			<!-- other theme ideas: 
 				Nature & Wildlife, Underwater World, Steampunk, Art Gallery, Retro Diner,
 				love, eco, military, map, geocities
@@ -84,10 +86,14 @@
 	</section>
 	<section id="contato">
 		<h1>Contacts</h1>
-		<p class="link_list highlight">
-			<a href="mailto:bruno_mussoi@hotmail.com">bruno_mussoi@hotmail.com</a>
-			<a href="https://github.com/BrunoSupremo">github.com/BrunoSupremo</a>
-		</p>
+		<ul class="highlight">
+			<li>
+				<a href="mailto:bruno_mussoi@hotmail.com">bruno_mussoi@hotmail.com</a>
+			</li>
+			<li>
+				<a href="https://github.com/BrunoSupremo">github.com/BrunoSupremo</a>
+			</li>
+		</ul>
 		<form action="https://formbold.com/s/3V085" method="POST">
 			<h2>Or quick form:</h2>
 			<label>

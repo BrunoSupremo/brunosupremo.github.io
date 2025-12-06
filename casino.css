@@ -17,8 +17,8 @@ html.casino{
 	outline-offset: 1px;
 	border-radius: .1em;
 }
-.casino .link_list a{
-	list-style-type: "♣️ ";
+.casino a::before{
+	content: "♣️";
 }
 
 .casino #options .current::before,.casino #options .current::after{

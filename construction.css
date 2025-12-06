@@ -35,9 +35,8 @@ html.construction{
 .construction :is(a:hover, a:focus){
 	text-decoration-style: dashed;
 }
-
-.construction .link_list a{
-	list-style-type: "/// ";
+.construction a::before{
+	content: "///";
 }
 
 .construction #options .current{
@@ -55,21 +54,21 @@ html.construction{
 }
 .construction section#sobre::before{
 	content: "";
-    position: absolute;
-    height: calc(100% + 1em);
-    width: .5em;
-    top: -.5em;
-    left: -.25em;
-    border-radius: 1em;
-    outline: .15em outset var(--main_color);
-    background-image: repeating-linear-gradient(45deg, var(--main_color), var(--main_color) 1em, var(--secondary_color) 1em, var(--secondary_color) 2em);
+	position: absolute;
+	height: calc(100% + 1em);
+	width: .5em;
+	top: -.5em;
+	left: -.25em;
+	border-radius: 1em;
+	outline: .15em outset var(--main_color);
+	background-image: repeating-linear-gradient(45deg, var(--main_color), var(--main_color) 1em, var(--secondary_color) 1em, var(--secondary_color) 2em);
 }
 .construction section h1{
 	margin-inline: -1em;
 	padding: 0 1em;
 	border-radius: .2em;
 	outline: .1em outset var(--main_color);
-    box-shadow: 0 0 .3em;
+	box-shadow: 0 0 .3em;
 	background-image: repeating-linear-gradient(45deg, currentcolor, currentcolor 1em, var(--secondary_color) 1em, var(--secondary_color) 2em);
 	color: var(--main_color);
 	text-shadow:

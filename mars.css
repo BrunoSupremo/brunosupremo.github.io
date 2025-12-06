@@ -34,12 +34,12 @@ html.mars{
 	color: var(--main_color);
 	box-shadow: 0 0 1em -.5em white;
 }
-.mars .link_list a{
-	list-style-type: "⊙ ";
+.mars a::before{
+	content: "⊙";
 }
 
 .mars #options .current{
-	box-shadow: 0 0 0 white;;
+	box-shadow: 0 0 0 white;
 	border-color: white;
 	color: white;
 }

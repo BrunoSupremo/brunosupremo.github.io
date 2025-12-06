@@ -1,0 +1,108 @@
+@charset "utf-8";
+
+.noir *{
+	font-family: "Verdana", sans-serif;
+}
+html.noir{
+	color-scheme: dark;
+	--main_color: #999;
+	--secondary_color: #cc6;
+	--background_color: #232320;
+	--light_x:0px;
+	--light_y:0px;
+}
+.noir body{
+	background:black;
+	color: var(--main_color);
+}
+.noir body::before{
+	content: "";
+	display: block;
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-radius: 50%;
+	box-shadow: 0 0 100px 20px white;
+	left: var(--light_x);
+	top: var(--light_y);
+	z-index: 1;
+}
+.noir :is(h1,h2){
+	color: hsl(from var(--main_color) h s calc(l * 1.25));
+}
+.noir img{
+	border-bottom: 1px solid var(--secondary_color);
+	filter: contrast(2) sepia(.9);
+}
+.noir a{
+	text-decoration-style: dotted;
+	transition: .2s text-shadow;
+}
+.noir a:hover{
+	text-shadow: 1ch 0 .5em #ffc9, 1ch 0 2em #ffc9;
+	text-decoration-style: dotted;
+}
+.noir a::before{
+	content: "🔦";
+}
+
+.noir section{
+	background-image: repeating-linear-gradient(
+		transparent,
+		var(--background_color) 1em
+	);
+	border: none;
+}
+.noir form label + *{
+	background: var(--background_color);
+	border: solid var(--main_color);
+	border-width: 0 .2em;
+	color: var(--main_color);
+}
+.noir form label + *::placeholder{
+	color: var(--secondary_color);
+}
+.noir form label + *:focus{
+	outline-color: var(--main_color);
+}
+.noir button{
+	position: relative;
+	background: var(--background_color);
+	color: var(--main_color);
+	border: none;
+	border-bottom: 1px solid transparent;
+}
+.noir :is(button:hover,button:focus,.current){
+	color: var(--secondary_color);
+	border-bottom: 1px solid var(--secondary_color);
+}
+
+.noir :is(h1,h2,p){
+	--distanceX_from_mouse: 0px;
+	--distanceY_from_mouse: 0px;
+	text-shadow:
+	calc(var(--distanceX_from_mouse) * -.05) calc(var(--distanceY_from_mouse) * -.05) .2em #000,
+	calc(var(--distanceX_from_mouse) * -.08) calc(var(--distanceY_from_mouse) * -.08) .2em #000,
+	calc(var(--distanceX_from_mouse) * -.11) calc(var(--distanceY_from_mouse) * -.11) .2em #000,
+	calc(var(--distanceX_from_mouse) * -.15) calc(var(--distanceY_from_mouse) * -.15) .2em #000;
+}
+.noir :is(section,img,button,input,textarea){
+	--distanceX_from_mouse: 0px;
+	--distanceY_from_mouse: 0px;
+	--blur: calc( abs(var(--distanceX_from_mouse)) + abs(var(--distanceY_from_mouse)) );
+	box-shadow:
+	calc(var(--distanceX_from_mouse) * -.1) calc(var(--distanceY_from_mouse) * -.1) calc(var(--blur) * .1) #000c,
+	calc(var(--distanceX_from_mouse) * -.2) calc(var(--distanceY_from_mouse) * -.2) calc(var(--blur) * .2) #000c,
+	calc(var(--distanceX_from_mouse) * -.3) calc(var(--distanceY_from_mouse) * -.3) calc(var(--blur) * .3) #000c,
+
+	inset calc(var(--distanceX_from_mouse) * 0.4) calc(var(--distanceY_from_mouse) * 0.4) calc(var(--blur) * .1) #000c,
+	inset calc(var(--distanceX_from_mouse) * 0.8) calc(var(--distanceY_from_mouse) * 0.8) calc(var(--blur) * .2) #000c,
+	inset calc(var(--distanceX_from_mouse) * 1.2) calc(var(--distanceY_from_mouse) * 1.2) calc(var(--blur) * .3) #000c;
+}
+
+
+@media only screen and (max-width: 600px) {
+	.noir section{
+		padding: 1em;
+	}
+}

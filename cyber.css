@@ -30,11 +30,12 @@ html.cyber{
 	border-width: 1px 1px 1px 5px;
 	box-shadow: var(--main_box_shadow);
 }
-.cyber .link_list a{
-	list-style-type: "▫ ";
+.cyber a::before{
+	content: "▫";
+	scale: 1.25;
 }
-.cyber .link_list :is(a:hover,a:focus){
-	list-style-type: "▪ ";
+.cyber :is(a:hover,a:focus)::before{
+	content: "▪";
 }
 
 .cyber .glitch{
@@ -141,6 +142,7 @@ html.cyber{
 	border: var(--main_border);
 	box-shadow: var(--main_box_shadow);
 	color: var(--secondary_color);
+	flex-grow: 1;
 }
 .cyber :is(button:hover,button:focus){
 	border-inline: 5px double;

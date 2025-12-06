@@ -91,8 +91,9 @@ html.school{
 .school img{
 	box-shadow: 0 0 .2em black;
 }
-.school .link_list a{
-	list-style-type: "-";
+.school a::before{
+	content: "-";
+	margin-right: .25ch;
 }
 
 .school section{
@@ -100,7 +101,8 @@ html.school{
 	background-image:
 	repeating-linear-gradient(
 		#888 0 1px,
-		transparent 1px 1em);
+		transparent 1px 1em
+	);
 	background-size: auto calc(100% - 2em);
 	background-position: bottom;
 	background-repeat: no-repeat;

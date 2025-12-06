@@ -34,26 +34,31 @@ html.portfolio{
 }
 .portfolio .color_changer{
 	color: var(--main_color);
-	text-shadow:
-	0 -2px 2px var(--secondary_color),
-	0 1px 1px var(--secondary_color),
-	0 2px 3px var(--secondary_color);
+	background: #0005;
+	border-radius: 0.333em;
+	padding: .1ch .7ch;
 }
 .portfolio a{
 	text-underline-offset: 0.1em;
 	color: var(--main_color);
-	text-shadow:
-	0 -1px 1px var(--secondary_color),
-	0 1px 1px var(--secondary_color);
+	background: #0004;
+	border-radius: 0.333em;
+	padding: .3ch .7ch;
+	outline: 0 solid #0003;
+	transition: .1s;
+	line-height: 1;
 }
 .portfolio a:hover, .portfolio a:focus{
-	text-decoration-color: var(--secondary_color);
-	text-shadow:
-	0 -3px 3px var(--secondary_color),
-	0 3px 3px var(--secondary_color);
+	text-shadow: 0 0 3px var(--secondary_color);
+	background: #0003;
+	outline: .5ch solid #0003;
 }
-.portfolio .link_list a{
-	list-style-type: disclosure-closed;
+.portfolio a::before{
+	content: "▶";
+	scale:.8;
+}
+.portfolio li:has(a){
+	margin-block: 1ch;
 }
 
 .portfolio #options .current{

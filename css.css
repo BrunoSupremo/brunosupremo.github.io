@@ -44,11 +44,19 @@ a{
 	color: var(--secondary_color);
 	text-decoration-thickness: 1px;
 }
+a::before{
+	content: "•";
+	margin-right: 1ch;
+	display: inline-block;
+}
 a:hover, a:focus{
 	text-decoration-style: double;
 }
-.link_list a{
-	display: list-item;
+ul{
+	padding-inline: 0;
+}
+li{
+	list-style-type: none;
 	list-style-position: inside;
 }
 ::marker{

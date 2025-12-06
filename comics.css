@@ -23,14 +23,16 @@ html.comics{
 	0 0 0 .1em white,
 	0 0 0 .25em var(--main_color);
 }
-.comics a:hover{
-	filter: brightness(.8);
-}
-.comics .link_list a{
-	list-style-type: "💥 ";
+.comics a{
 	text-decoration: underline;
 	text-decoration-thickness: .2em;
-	text-decoration-color: hsl(from currentColor h s calc(l * 0.7));
+	text-decoration-color: hsl(from currentColor h s calc(l * 0.8));
+}
+.comics a:hover{
+	color: hsl(from var(--secondary_color) h s calc(l * 0.8));
+}
+.comics a::before{
+	content: "💥";
 }
 
 .comics #options{

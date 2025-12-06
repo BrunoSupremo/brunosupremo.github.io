@@ -61,9 +61,11 @@ html.w95{
 	font-size: 1em;
 	font-weight: bold;
 }
-.w95 .link_list a{
-	list-style-type: none;
+.w95 a{
 	color: blue;
+}
+.w95 a::before{
+	content: none;
 }
 
 .w95 .highlight {
