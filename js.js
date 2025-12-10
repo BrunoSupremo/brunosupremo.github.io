@@ -54,8 +54,11 @@ function noir_mouse_events(event) {
 		let distanceX = noir_light.x - (rect.left + rect.width/2);
 		let distanceY = noir_light.y - (rect.top + rect.height/2);
 
-		element.style.setProperty('--distanceX_from_mouse', distanceX + "px");
-		element.style.setProperty('--distanceY_from_mouse', distanceY + "px");
+		if((distanceX*distanceX+distanceY*distanceY)<300000){
+			// check distance to affect just those near enough, too much lag otherwise
+			element.style.setProperty('--distanceX_from_mouse', distanceX + "px");
+			element.style.setProperty('--distanceY_from_mouse', distanceY + "px");
+		}
 	});
 }
 

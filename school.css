@@ -166,6 +166,9 @@ html.school{
 }
 
 @media only screen and (max-width: 600px) {
+	.school body::before, .school body::after{
+		content: none;
+	}
 	.school section{
 		padding: 1em 0 1em 2em;
 		overflow: hidden;

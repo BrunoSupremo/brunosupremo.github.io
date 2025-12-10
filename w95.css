@@ -125,5 +125,6 @@ html.w95{
 @media only screen and (max-width: 600px) {
 	.w95 section h1{
 		margin: 0;
+		margin-inline: -.25em;
 	}
 }

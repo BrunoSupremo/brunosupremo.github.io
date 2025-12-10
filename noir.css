@@ -36,14 +36,19 @@ html.noir{
 }
 .noir a{
 	text-decoration-style: dotted;
-	transition: .2s text-shadow;
 }
 .noir a:hover{
-	text-shadow: 1ch 0 .5em #ffc9, 1ch 0 2em #ffc9;
+	text-shadow: 0 0 .5em #ffc9, 0 0 2em #ffc9;
 	text-decoration-style: dotted;
 }
 .noir a::before{
-	content: "🔦";
+	color: black;
+}
+.noir a::after{
+	content: "•";
+	margin-left: 1ch;
+	display: inline-block;
+	color: black;
 }
 
 .noir section{

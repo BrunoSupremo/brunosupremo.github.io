@@ -4,6 +4,7 @@
 	font-family: "Verdana", sans-serif;
 }
 html.mars{
+	color-scheme: dark;
 	--main_color: brown;
 	--secondary_color: pink;
 	--background_color: white;

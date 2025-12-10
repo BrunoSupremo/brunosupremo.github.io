@@ -57,6 +57,9 @@ html.cyber{
 	border-inline-width: 5px;
 	margin-inline: -3px;
 }
+.cyber #sites h2{
+	text-align: left;
+}
 
 @keyframes screen_lines{
 	0%{
@@ -78,19 +81,18 @@ html.cyber{
 .cyber section::before, .cyber section::after{
 	content: "";
 	position: absolute;
-	border: 1px solid;
 	color: var(--secondary_color);
 	box-shadow: var(--main_box_shadow);
 }
 .cyber section::before{
 	height: 50%;
-	width: 0;
+	width: 4px;
 	left: -1em;
 	top: 25%;
 }
 @keyframes border_piece{
 	0%{
-		left: calc(100% - 1em);
+		left: calc(100% - 2em);
 		scale: 0;
 	}
 	2%, 49%{
@@ -103,27 +105,28 @@ html.cyber{
 		scale: 1;
 	}
 	100%{
-		left: 0;
+		left: 1em;
 		scale: 0;
 	}
 }
 .cyber section::after{
+	border: 1px solid;
 	height: 4px;
 	width: 1em;
 	bottom: -4px;
 	animation: 10s infinite border_piece linear;
 }
 .cyber section h1{
-	position: absolute;
+	position: relative;
+	top: calc(-.5em + -4px);
+	width: fit-content;
+	margin-inline: auto;
 	padding: 0 1em;
-	top: -1em;
-	border: var(--main_border);
-	box-shadow: var(--main_box_shadow);
-	background: var(--background_color);
-	background-image: 
-	linear-gradient(transparent 24%, var(--transparent_main_color) 25%, transparent 26%, transparent 74%, var(--transparent_main_color) 75%, transparent 76%);
-	background-size: 50px 50px;
-	animation: screen_lines 10s linear infinite;
+	border: inherit;
+	box-shadow: inherit;
+	background: inherit;
+	background-color: var(--background_color);
+	animation: inherit;
 }
 .cyber form label + *{
 	background: var(--background_color);
@@ -132,6 +135,7 @@ html.cyber{
 }
 .cyber form label + *:focus{
 	color: var(--secondary_color);
+	outline: none;
 }
 .cyber form label + :is(*:-webkit-autofill, *:autofill){
 	/*hack to counter chrome stupid useragent stylesheet*/
@@ -149,9 +153,27 @@ html.cyber{
 	margin-inline: -3px;
 }
 
+/* Apply only if the browser supports corner-shape */
+@supports (corner-shape: bevel) {
+	.cyber *{
+		border-radius: 1em;
+		corner-shape: bevel;
+	}
+	.cyber section h1{
+		left: calc(-.5em + -4px);
+		border-radius: .5em 0 .5em 0;
+		margin-inline: 0;
+	}
+}
+
 @media only screen and (max-width: 600px) {
+	.cyber section{
+		margin: .1em;
+	}
 	.cyber section::before{
-		animation: none;
 		content: none;
+	}
+	.cyber section h1{
+		left: 0;
 	}
 }
