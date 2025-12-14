@@ -18,11 +18,11 @@ html.casino{
 	border-radius: .1em;
 }
 .casino a::before{
-	content: "♣️";
+	content: "♣️\FE0E";
 }
 
 .casino #options .current::before,.casino #options .current::after{
-	content: "♦♦♦";
+	content: "♦♦♦\FE0E";
 }
 
 .casino section{
@@ -78,7 +78,7 @@ html.casino{
 	padding-inline: 0;
 }
 .casino button::before,.casino button::after{
-	content: "♦";
+	content: "♦\FE0E";
 	padding-inline: 1ch;
 }
 .casino button:nth-child(odd){
@@ -91,7 +91,7 @@ html.casino{
 }
 .casino :not(.current):is(button:hover,button:focus)::before,
 .casino :not(.current):is(button:hover,button:focus)::after{
-	content: "♦♦";
+	content: "♦♦\FE0E";
 	padding-inline: .6ch;
 }
 

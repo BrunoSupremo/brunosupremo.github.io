@@ -30,7 +30,7 @@ html.w95{
 	align-items: center;
 }
 .w95 h1::after{
-	content: "✖";
+	content: "✖\FE0E";
 	background-color: var(--background_color);
 	border: 2px outset;
 	box-shadow: 1px 1px black;

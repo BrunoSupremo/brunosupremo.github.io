@@ -31,11 +31,11 @@ html.cyber{
 	box-shadow: var(--main_box_shadow);
 }
 .cyber a::before{
-	content: "▫";
+	content: "▫\FE0E";
 	scale: 1.25;
 }
 .cyber :is(a:hover,a:focus)::before{
-	content: "▪";
+	content: "▪\FE0E";
 }
 
 .cyber .glitch{

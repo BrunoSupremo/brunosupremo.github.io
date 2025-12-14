@@ -45,7 +45,7 @@ html.noir{
 	color: black;
 }
 .noir a::after{
-	content: "•";
+	content: "•\FE0E";
 	margin-left: 1ch;
 	display: inline-block;
 	color: black;

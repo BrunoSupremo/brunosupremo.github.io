@@ -54,7 +54,7 @@ html.portfolio{
 	outline: .5ch solid #0003;
 }
 .portfolio a::before{
-	content: "▶";
+	content: "▶\FE0E";
 	scale:.8;
 }
 .portfolio li:has(a){
