@@ -43,8 +43,10 @@ function slime_borders() {
 
 let noir_light = {x: 100, y: 200}
 function noir_mouse_events(event) {
-	noir_light.x  = event ? event.clientX : noir_light.x;
-	noir_light.y = event ? event.clientY : noir_light.y;
+	if(event && event.clientX){
+		noir_light.x  = event.clientX;
+		noir_light.y = event.clientY;
+	}
 
 	document.documentElement.style.setProperty('--light_x', noir_light.x+window.scrollX + "px");
 	document.documentElement.style.setProperty('--light_y', noir_light.y+window.scrollY + "px");
@@ -75,19 +77,14 @@ function theme_based_actions() {
 	}
 	if(theme == "noir"){
 		document.addEventListener("mousemove", noir_mouse_events)
+		window.addEventListener("scroll", noir_mouse_events);
+		window.addEventListener("resize", noir_mouse_events);
 
-		function update_without_mouse() {
-			noir_mouse_events()
-		}
-
-		window.addEventListener("scroll", update_without_mouse);
-		window.addEventListener("resize", update_without_mouse);
-
-		update_without_mouse();
+		noir_mouse_events();
 	}else{
 		document.removeEventListener("mousemove", noir_mouse_events);
-		window.removeEventListener("scroll", update_without_mouse);
-		window.removeEventListener("resize", update_without_mouse);
+		window.removeEventListener("scroll", noir_mouse_events);
+		window.removeEventListener("resize", noir_mouse_events);
 	}
 }
 theme_based_actions()
