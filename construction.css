@@ -4,25 +4,27 @@
 	font-family: "Impact", "Blippo", "Stencil Std", "Arial Black", fantasy, monospace, sans-serif;
 }
 html.construction{
+	color-scheme: dark;
 	--main_color: #111;
-	--secondary_color: #fd3;
-	--background_color: #985;
+	--secondary_color: #fd2;
+	--background_color: #111;
 }
 .construction body{
 	text-shadow: 0 0 3px black;
-	background-image: 
+	background-image:
 	repeating-linear-gradient(
 		45deg,
-		rgb(0 0 0 / 0.1),
-		transparent .2em,
-		transparent 9.8em,
-		rgb(255 255 255 / 0.1) 10em),
+		rgb(255 255 255 / 0.2),
+		transparent .1em,
+		transparent 3.9em,
+		rgb(255 255 255 / 0.2) 4em),
 	repeating-linear-gradient(
 		-45deg,
-		rgb(0 0 0 / 0.1),
-		transparent .2em,
-		transparent 9.8em,
-		rgb(255 255 255 / 0.1) 10em);
+		rgb(255 255 255 / 0.2),
+		transparent .1em,
+		transparent 3.9em,
+		rgb(255 255 255 / 0.2) 4em),
+	radial-gradient(ellipse at top, #fff2, #0006);
 }
 .construction img{
 	padding: .1em;
@@ -51,6 +53,7 @@ html.construction{
 	border: 0.2em solid #998;
 	border-radius: .5em;
 	background-color: #554;
+	background-image: radial-gradient(ellipse at top, #fff2, #0006);
 	color: #eec;
 	margin-inline: 1em;
 	box-shadow: .1em .1em .1em #0008, .1em .1em .1em #0008 inset;
@@ -84,10 +87,14 @@ html.construction{
 	.1em 0 var(--secondary_color),
 	.1em .1em var(--secondary_color);
 }
-.construction form label + *{
+.construction form label + *,
+.construction form label + *:autofill{
 	outline: .1em dashed var(--main_color);
 	margin-top: .1em;
 	outline-offset: .05em;
+	background-color: white;
+	border-color: transparent;
+	color: var(--main_color);
 }
 .construction button{
 	background: #0008;

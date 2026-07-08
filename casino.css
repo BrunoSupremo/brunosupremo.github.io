@@ -5,7 +5,7 @@
 }
 html.casino{
 	--main_color: white;
-	--secondary_color: yellow;
+	--secondary_color: gold;
 	--background_color: green;
 }
 .casino body{
@@ -13,9 +13,8 @@ html.casino{
 	box-shadow: 0 0 100em #0008 inset;
 }
 .casino img{
-	outline: 3px double gold;
-	outline-offset: 1px;
-	border-radius: .1em;
+	outline: .3em ridge gold;
+	border-radius: .3em;
 }
 .casino a::before{
 	content: "♣️\FE0E";
@@ -25,14 +24,25 @@ html.casino{
 	content: "♦♦♦\FE0E";
 }
 
+@keyframes lamps{
+	0%, 30%, 70%, 100%{
+		outline-color: #f80;
+		box-shadow: 0 0 10px black inset, 0 0 2em #e80;
+	}
+	35%, 65%{
+		outline-color: var(--secondary_color);
+		box-shadow: 0 0 10px black inset, 0 0 2em gold;
+	}
+}
 .casino section{
 	background: radial-gradient(ellipse at bottom, red, darkred);
 	padding: 1.5em 3em;
-	outline: .5em dotted gold;
+	outline: .5em dotted var(--secondary_color);
 	outline-offset: -0.75em;
-	border: 1em solid darkorange;
+	border: 1em solid #e80;
 	border-radius: 3em;
-	box-shadow: 0 0 2em gold;
+	box-shadow: 0 0 10px black inset, 0 0 2em gold;
+	animation: lamps 4s linear infinite;
 }
 .casino :is(h1, section > h2){
 	color: white;
@@ -40,6 +50,9 @@ html.casino{
 	font-weight: bold;
 	text-shadow: 0px 0px 1em gold, -2px 0px .1em gold, 2px 0px .1em gold, 0px -2px .1em gold, 0px 2px .1em gold;
 	text-transform: uppercase;
+	text-decoration: underline overline;
+	text-decoration-thickness: 1px;
+	text-underline-offset: .25em;
 	letter-spacing: .2em;
 	font-family: serif;
 	margin-bottom: 0.5em;
@@ -49,10 +62,12 @@ html.casino{
 	background: white;
 	border-radius: 1em;
 	padding-inline: .5em;
+	padding-bottom: .1em;
 	font-weight: bold;
 	text-shadow: 0 1px BLACK;
 	font-variant-caps: petite-caps;
 	letter-spacing: .15em;
+	box-shadow: 0 0 2px black inset;
 }
 .casino .highlight{
 	background: forestgreen;
@@ -70,12 +85,14 @@ html.casino{
 	outline: 1px dashed white;
 }
 .casino button{
-	background-color: black;
+	background-color: #111;
 	color: white;
 	border-radius: 2em;
 	border: 3px dashed;
 	text-transform: uppercase;
 	padding-inline: 0;
+	background-image: radial-gradient(circle, #fff2, #0002);
+	box-shadow: 0 3px #111, 0 3px 15px -5px black;
 }
 .casino button::before,.casino button::after{
 	content: "♦\FE0E";
@@ -83,9 +100,11 @@ html.casino{
 }
 .casino button:nth-child(odd){
 	background-color:red;
+	box-shadow: 0 3px #b00, 0 3px 15px -5px black;
 }
 .casino button:last-of-type{
 	background-color: white;
+	box-shadow: 0 3px #ccc, 0 3px 15px -5px black;
 	color: black;
 	border-style: dotted;
 }

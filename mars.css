@@ -46,7 +46,7 @@ html.mars{
 }
 
 .mars section{
-	background-image: linear-gradient(#bdf3, #F44336EE);
+	background-image: linear-gradient(#bdf3, var(--main_color));
 	border-radius: 10px;
 	border: 1px solid white;
 	border-width: 0px 2px 5px;
@@ -70,15 +70,16 @@ html.mars{
 }
 .mars button{
 	color: var(--main_color);
-	border-radius: 10px;
+	border-radius: .5em;
+	corner-shape: bevel;
 	border: solid var(--main_color);
-	border-width: 0 5px;
+	border-width: 0 .2em;
 	background: transparent;
 	box-shadow: 0 0 0.5em black inset, 0 3em 0 white inset;
 	transition: box-shadow .3s, color .3s;
 }
 .mars :is(button:hover,button:focus){
-	box-shadow: 0 0 0.5em black inset, 0 0.2em 0 white inset, 0 -1.5em 1em -0.5em white;
+	box-shadow: 0 0 0.5em black inset, 0 0.2em 0 white inset, 0 -1.5em 1em -0.5em #fff6;
 	color: white;
 }
 

@@ -28,57 +28,6 @@ html.school{
 	background-position-y: 1vh;
 	color: var(--main_color);
 }
-.school body::before,.school body::after{
-	content: "\A\A\A\A 5cm \A\A\A\A\A 10cm \A\A\A\A\A 15cm \A\A\A\A\A 20cm \A\A\A\A\A 25cm \A\A\A\A\A 30cm ";
-	line-height: 1cm;
-	font-family: sans-serif;
-	font-style: normal;
-	font-size: .4cm;
-	--padding: .3cm;
-	padding-top: var(--padding);
-	padding-right: .1cm;
-	text-align: right;
-	white-space: pre;
-	position: absolute;
-	top: 1cm;
-	height: calc(30cm - var(--padding) + 1px);
-	left: 0;
-	width: 2cm;
-	background-color: #fffc;
-	background-image:
-	repeating-linear-gradient(
-		#333 0 1px,
-		transparent 1px .1cm
-	),
-	repeating-linear-gradient(
-		#333 0 1px,
-		transparent 1px .5cm
-	),
-	repeating-linear-gradient(
-		#333 0 1px,
-		transparent 1px 1cm
-	),
-	repeating-linear-gradient(
-		#333 0 1px,
-		transparent 1px 5cm
-	);
-	background-size: .1cm auto, .2cm auto, .5cm auto, 1cm auto;
-	background-repeat: no-repeat;
-	background-position-x: right;
-	border-top: .25cm solid #fffc;
-	border-bottom: .25cm solid #fffc;
-	border-radius: .2cm;
-	background-clip: padding-box;
-	box-shadow: 0 0 0.25em black, -2em 0 2em -3em black inset;
-}
-.school body::after{
-	rotate: 180deg;
-	top: unset;
-	bottom: 1cm;
-	left: unset;
-	right: 0;
-	z-index: -1;
-}
 .school h1{
 	position: absolute;
 	writing-mode: tb;
@@ -166,9 +115,6 @@ html.school{
 }
 
 @media only screen and (max-width: 600px) {
-	.school body::before, .school body::after{
-		content: none;
-	}
 	.school section{
 		padding: 1em 0 1em 2em;
 		overflow: hidden;

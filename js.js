@@ -13,7 +13,7 @@ function change_theme(button) {
 	theme_based_actions()
 }
 
-const glitchables = document.querySelectorAll(":is(span,img,a,p,button,h1,h2,label,input)");
+const glitchables = document.querySelectorAll("span,img,a,p,button,h1,h2,label,input");
 let glitched_element = glitchables[0];
 function glitch() {
 	if(Math.random()>.5){
@@ -42,26 +42,34 @@ function slime_borders() {
 }
 
 let noir_light = {x: 100, y: 200}
+let ticking = false;
+const noir_elements = document.querySelectorAll("section,img,button,input,textarea,h1,h2,p");
 function noir_mouse_events(event) {
 	if(event && event.clientX){
 		noir_light.x  = event.clientX;
 		noir_light.y = event.clientY;
 	}
 
-	document.documentElement.style.setProperty('--light_x', noir_light.x+window.scrollX + "px");
-	document.documentElement.style.setProperty('--light_y', noir_light.y+window.scrollY + "px");
+	if (!ticking) {
+		requestAnimationFrame(() => {
+			document.documentElement.style.setProperty('--light_x', noir_light.x+window.scrollX + "px");
+			document.documentElement.style.setProperty('--light_y', noir_light.y+window.scrollY + "px");
 
-	document.querySelectorAll("section,img,button,input,textarea,h1,h2,p").forEach(element => {
-		let rect = element.getBoundingClientRect()
-		let distanceX = noir_light.x - (rect.left + rect.width/2);
-		let distanceY = noir_light.y - (rect.top + rect.height/2);
+			noir_elements.forEach(element => {
+				let rect = element.getBoundingClientRect()
+				let distanceX = noir_light.x - (rect.left + rect.width/2);
+				let distanceY = noir_light.y - (rect.top + rect.height/2);
 
-		if((distanceX*distanceX+distanceY*distanceY)<300000){
-			// check distance to affect just those near enough, too much lag otherwise
-			element.style.setProperty('--distanceX_from_mouse', distanceX + "px");
-			element.style.setProperty('--distanceY_from_mouse', distanceY + "px");
-		}
-	});
+				if((distanceX*distanceX + distanceY*distanceY)<300000){
+					// check distance to affect just those near enough, too much lag otherwise
+					element.style.setProperty('--distanceX_from_mouse', distanceX + "px");
+					element.style.setProperty('--distanceY_from_mouse', distanceY + "px");
+				}
+			});
+			ticking = false;
+		});
+		ticking = true;
+	}
 }
 
 let loop_timer = null

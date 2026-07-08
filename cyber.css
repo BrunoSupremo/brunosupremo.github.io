@@ -132,6 +132,7 @@ html.cyber{
 	background: var(--background_color);
 	border-bottom: var(--main_border);
 	color: currentcolor;
+	caret-shape: block;
 }
 .cyber form label + *:focus{
 	color: var(--secondary_color);
