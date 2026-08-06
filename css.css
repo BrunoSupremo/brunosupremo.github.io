@@ -101,6 +101,10 @@ form label + *{
 	box-sizing: border-box;
 	width: 100%;
 }
+textarea{
+	field-sizing: content;
+	min-height: 3lh;
+}
 button{
 	cursor: pointer;
 	margin: 0;

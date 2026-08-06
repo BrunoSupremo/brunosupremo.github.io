@@ -87,13 +87,14 @@ html.school{
 	border: 3px dotted var(--main_color);
 	border-top: none;
 	border-right: none;
-	height: 2em;
-	padding: .5em 0 0 .5em;
+	padding: .75em 0 0 .5em;
 	color: var(--secondary_color);
 }
+.school form label + *:not(textarea){
+	height: 2em;
+}
 .school form label + textarea{
-	padding-top: 1em;
-	height: 3em;
+	padding-block: 1em;
 }
 .school form label + *::placeholder{
 	color: #f33;
